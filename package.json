@@ -7,7 +7,7 @@
   "scripts": {
     "docs:dev": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch .vuepress --watch . --exec npx vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:styles": "postcss styles/styles.css -o docs/.vuepress/styles/index.scss"
+    "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss"
   },
   "keywords": [],
   "author": "Stefan Pfaffel",
