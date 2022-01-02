@@ -2,6 +2,8 @@
 docs/.vuepress/styles/index.scss
 docs/api-reference/README.md
 
+api.yaml
+
 # Logs
 logs
 *.log
