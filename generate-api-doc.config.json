@@ -1,0 +1,35 @@
+{
+    "headings": 3,
+    "language_tabs": [
+        {
+            "javascript": "JavaScript"
+        },
+        {
+            "python": "Python"
+        },
+        {
+            "go": "Go"
+        }
+    ],
+    "verbose": false,
+    "tagGroups": [
+        {
+            "title": "Messages",
+            "tags": [
+                "queue messages"
+            ]
+        },
+        {
+            "title": "Listeners",
+            "tags": [
+                "queue listeners"
+            ]
+        },
+        {
+            "title": "Queues",
+            "tags": [
+                "queues"
+            ]
+        }
+    ]
+}
