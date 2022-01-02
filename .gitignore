@@ -1,3 +1,6 @@
+# Files we generate
+docs/.vuepress/styles/index.scss
+
 # Logs
 logs
 *.log
