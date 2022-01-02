@@ -21,13 +21,13 @@ module.exports = {
         sidebarDepth: 4,
         navbar: [{
             text: 'Getting Started',
-            link: '/overview/',
+            link: '/getting-started/',
         }, {
             text: 'API Overview',
-            link: '/overview/',
+            link: '/api-overview/',
         }, {
             text: 'API Reference',
-            link: '/endpoints/',
+            link: '/api-reference/',
         }],
     },
 }
