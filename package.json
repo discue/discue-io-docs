@@ -1,0 +1,32 @@
+{
+  "name": "discue-io-docs",
+  "description": "The documenation module of discue.io",
+  "version": "0.1.0",
+  "main": "index.js",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "start": "npm run build && npm run serve",
+    "build": "vuepress build docs",
+    "serve": "serve docs/.vuepress/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discue/discue-io-docs.git"
+  },
+  "author": "Stefan Pfaffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/discue/discue-io-docs/issues"
+  },
+  "homepage": "https://github.com/discue/discue-io-docs#readme",
+  "devDependencies": {
+    "serve": "^13.0.2",
+    "vuepress": "^1.9.5",
+    "vuepress-theme-api": "^1.0.1",
+    "widdershins": "^4.0.1"
+  }
+}
