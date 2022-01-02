@@ -9,8 +9,8 @@ declare -r TEMPLATE_FOLDER="../discue-io-docs-next/templates"
 
 declare -r API_INPUT_FILE="../discue-io-docs-next/api.yaml"
 
-declare -r FINAL_TITLE="Endpoints"
-declare -r FINAL_FILE_PATH="../discue-io-api-docs-next/docs/endpoints/README.md"
+declare -r FINAL_TITLE="Reference"
+declare -r FINAL_FILE_PATH="../discue-io-api-docs-next/docs/api-reference/README.md"
 
 mkdir -p "${TMP_FOLDER}"
 
