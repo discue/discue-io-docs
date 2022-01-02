@@ -1,5 +1,6 @@
 # Files we generate
 docs/.vuepress/styles/index.scss
+docs/api-reference/README.md
 
 # Logs
 logs
