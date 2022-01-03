@@ -14,7 +14,8 @@ module.exports = {
     // theme and its config
     theme: '@vuepress/theme-default',
     themeConfig: {
-        logo: 'https://avatars.githubusercontent.com/u/95524644?s=200&v=4',
+        logo: '/icons/icon_light.png',
+        logoDark: '/icons/icon_dark.png',
         docsDir: 'docs',
         docsBranch: 'master',
         repo: 'discue/discue-io-docs',
