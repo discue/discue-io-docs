@@ -16,6 +16,7 @@ module.exports = {
     themeConfig: {
         logo: 'https://avatars.githubusercontent.com/u/95524644?s=200&v=4',
         docsDir: 'docs',
+        docsBranch: 'master',
         repo: 'discue/discue-io-docs',
         repoLabel: 'GitHub',
         sidebarDepth: 4,
