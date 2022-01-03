@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.badge {
+  @apply font-bold;
+}
+
 .sidebar-items>li>.sidebar-item-children>li>a.router-link-active.router-link-exact-active.sidebar-item {
   @apply text-lg;
 }
