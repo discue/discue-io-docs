@@ -1,5 +1,5 @@
 {{= data.tags.section }}
-<h3 id="{{=data.operationUniqueSlug}}-parameters">Parameters</h3>
+##### Parameters [#{{=data.method.verb}}-{{=data.normalizedPath}}-parameters]
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -7,7 +7,7 @@
 {{~}}
 
 {{? data.longDescs }}
-#### Detailed descriptions
+###### Descriptions [#{{=data.method.verb}}-{{=data.normalizedPath}}-parameter-descriptions]
 {{~ data.parameters :p}}{{? p.shortDesc !== p.description}}
 **{{=p.name}}**: {{=p.description}}{{?}}
 {{~}}
@@ -30,7 +30,7 @@
 {{~}}
 
 {{? data.enums && data.enums.length }}
-#### Enumerated Values
+##### Enumerated Values [#{{=data.method.verb}}-{{=data.normalizedPath}}-enums]
 
 |Parameter|Value|
 |---|---|

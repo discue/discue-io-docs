@@ -5,7 +5,7 @@
 {{~}}
 
 {{? data.responseSchemas }}
-<h3 id="{{=data.operationUniqueSlug}}-responses">Responses</h3>
+##### Responses [#{{=data.method.verb}}-{{=data.normalizedPath}}-responses]
 
 {{= data.utils.getResponseExamples(data) }}
 {{?}}
@@ -67,7 +67,7 @@ Status Code **{{=response.status}}**
 {{ data.responseHeaders = data.utils.getResponseHeaders(data); }}
 {{? data.responseHeaders.length }}
 
-### Response Headers
+##### Response Headers [#{{=data.method.verb}}-{{=data.normalizedPath}}-response-headers]
 
 |Status|Header|Type|Format|Description|
 |---|---|---|---|---|
