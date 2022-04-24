@@ -82,5 +82,21 @@ module.exports = {
             text: 'API Reference',
             link: '/api-reference/',
         }],
+        sidebar: [{
+            text: 'Introduction',
+            link: '/introduction/',
+        }, {
+            text: 'Getting Started',
+            link: '/getting-started/',
+        }, {
+            text: 'API Overview',
+            link: '/api-overview/',
+        }, {
+            text: 'API Best Practices',
+            link: '/api-best-practices/',
+        }, {
+            text: 'API Reference',
+            link: '/api-reference/',
+        }],
     },
 }
