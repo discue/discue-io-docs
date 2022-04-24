@@ -29,7 +29,7 @@ module.exports = {
     // site config
     lang: 'en-US',
     title: 'discue',
-    description: 'Developer documentation of discue.io: Your secure and reliable messaging and queueing service.',
+    description: 'Developer documentation for the secure and reliable messaging and queueing service.',
     darkMode: false,
     plugins: [
         ["@vuepress/plugin-prismjs", true],
