@@ -28,6 +28,8 @@ module.exports = {
     // site config
     lang: 'en-US',
     title: 'discue',
+    description: 'Developer documentation of discue.io: Your secure and reliable messaging and queueing service.',
+    darkMode: false,
     extendsMarkdown: (md) => {
         md.use(require('markdown-it-attrs'), {
             allowedAttributes: ['id'],
