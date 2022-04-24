@@ -56,7 +56,12 @@ span.site-name {
 }
 
 span.site-name:after {
-  content: '.io/docs';
+  content: '.io';
+  @apply text-4xl text-gray-500 font-light !important;
+}
+
+span.site-name:before {
+  content: 'docs.';
   @apply text-4xl text-gray-500 font-light !important;
 }
 
