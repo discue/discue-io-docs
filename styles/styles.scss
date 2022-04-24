@@ -55,6 +55,11 @@ span.site-name {
   margin-left: 0.55rem !important;
 }
 
+.home #main-title:after {
+  content: '.io';
+  @apply text-5xl text-gray-500 font-light !important;
+}
+
 span.site-name:after {
   content: '.io';
   @apply text-4xl text-gray-500 font-light !important;
