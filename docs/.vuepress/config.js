@@ -66,6 +66,7 @@ module.exports = {
         darkMode: false,
         logo: '/logo.svg',
         logoDark: '/icons-fire-all-gray/web/icon-96.png',
+        editLinkText: 'Improve this page',
         docsDir: 'docs',
         docsBranch: 'master',
         repo: 'discue/discue-io-docs',
