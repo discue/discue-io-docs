@@ -63,6 +63,7 @@ module.exports = {
     theme: path.resolve(__dirname, './theme'),
     head: [
     themeConfig: {
+        darkMode: false,
         logo: '/logo.svg',
         logoDark: '/icons-fire-all-gray/web/icon-96.png',
         docsDir: 'docs',
