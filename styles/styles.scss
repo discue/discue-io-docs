@@ -14,35 +14,46 @@
   @apply text-xl;
 }
 
+.navbar span a {
+  @apply flex items-center;
+  margin-left: 0.1rem;
+}
+
+.navbar span a span {
+  @apply mt-3;
+}
+
+.navbar-items-wrapper {
+  @apply mt-1;
+}
+
 .navbar-items {
   @apply space-x-12;
 }
 
 .navbar-item>a {
-  @apply text-black text-xl font-bold transition-transform transform;
+  @apply text-gray-900 text-xl font-bold transition-transform transform;
 }
 
 .navbar-item>a:hover,
 .navbar-item>a.router-link-active {
-  @apply border-b-4 border-black pb-2 -translate-y-0.5 !important;
+  @apply border-b-4 border-gray-900 pb-2 -translate-y-0.5 !important;
 }
 
 img.logo {
   margin-right: 0 !important;
+  width: 1.8rem;
+  margin-top: -0.6rem;
 }
 
 span.site-name {
-  @apply text-3xl text-black font-bold -top-1 !important;
-}
-
-span.site-name:before {
-  content: 'messaging and queueing';
-  @apply font-light text-black text-sm absolute transform transition-transform translate-x-1 translate-y-11 !important;
+  @apply text-4xl text-gray-900 font-bold -top-1 !important;
+  margin-left: 0.55rem !important;
 }
 
 span.site-name:after {
-  content: '.io/developers';
-  @apply font-normal !important;
+  content: '.io/docs';
+  @apply text-4xl text-gray-500 font-light !important;
 }
 
 html.dark {
@@ -65,6 +76,53 @@ html.dark {
   }
 }
 
+.page-nav {
+  @apply border-none !important;
+}
+
+a.header-anchor {
+  color: #AFE81A;
+}
+
+.action-button {
+  @apply rounded-lg font-bold text-xl !important;
+}
+
+footer {
+  @apply absolute w-full left-0 right-0 p-0;
+}
+
+footer ul {
+  @apply list-none;
+}
+
+.back-to-top:hover {
+  @apply transform transition-transform hover:-translate-y-1 hover:shadow-md
+}
+
+.home .footer {
+  border: none !important;
+}
+
+.page footer {
+  border-top: 1px solid var(--c-border);
+  background-color: var(--c-bg-navbar);
+}
+
+.page-nav .inner {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 1rem !important;
+} 
+
+.theme-default-content {
+  padding-bottom: 0 !important
+}
+
+.page-meta .meta-item { 
+  margin-top: 0 !important
+} 
+
 @media screen and (max-width: 719px) {
   .toggle-sidebar-button {
     display: flex;
@@ -78,8 +136,8 @@ html.dark {
 
 :root {
 
-  --c-brand: #3eaf7c;
-  --c-brand-light: #4abf8a;
+  --c-brand: #111827;
+  --c-brand-light: #111827;
 
 
   --c-bg: theme('colors.gray.50');
@@ -140,8 +198,8 @@ html.dark {
 
 
   --navbar-height: 7rem;
-  --navbar-padding-v: 1.25rem;
-  --navbar-padding-h: 1.5rem;
+  --navbar-padding-v: 1rem;
+  --navbar-padding-h: 2rem;
   --sidebar-width: 25rem;
   --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
   --content-width: 740px;
