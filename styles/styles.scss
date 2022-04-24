@@ -46,6 +46,10 @@ img.logo {
   margin-top: -0.6rem;
 }
 
+.feature h2 {
+  @apply text-center
+}
+
 span.site-name {
   @apply text-4xl text-gray-900 font-bold -top-1 !important;
   margin-left: 0.55rem !important;
