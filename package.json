@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "docs:dev": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch .vuepress --watch . --exec npx vuepress dev docs",
+    "docs:serve": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch docs/.vuepress --watch styles --exec npm run docs:dev",
+    "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss"
   },
