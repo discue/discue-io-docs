@@ -2,6 +2,9 @@
     "headings": 3,
     "language_tabs": [
         {
+            "shell": "curl"
+        },
+        {
             "javascript": "JavaScript"
         },
         {
