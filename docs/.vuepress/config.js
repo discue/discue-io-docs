@@ -1,4 +1,5 @@
 const anchorPlugin = require('markdown-it-anchor')
+const { path } = require('@vuepress/utils')
 
 // eslint-disable-next-line no-control-regex
 const rControl = /[\u0000-\u001f]/g
@@ -59,8 +60,8 @@ module.exports = {
         extractHeaders: { level: [2, 3, 4, 5, 6] },
         anchor: false
     },
-    // theme and its config
-    theme: '@vuepress/theme-default',
+    theme: path.resolve(__dirname, './theme'),
+    head: [
     themeConfig: {
         logo: '/icons/icon_light.png',
         logoDark: '/icons/icon_dark.png',
