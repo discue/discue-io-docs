@@ -30,6 +30,13 @@ module.exports = {
     title: 'discue',
     description: 'Developer documentation of discue.io: Your secure and reliable messaging and queueing service.',
     darkMode: false,
+    plugins: [
+        ["@vuepress/plugin-prismjs", true],
+        // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+        // ["@vuepress/plugin-shiki", {
+        //     theme: 'material-default'
+        // }],
+    ],
     extendsMarkdown: (md) => {
         md.use(require('markdown-it-attrs'), {
             allowedAttributes: ['id'],
