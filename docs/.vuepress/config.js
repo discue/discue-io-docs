@@ -63,8 +63,8 @@ module.exports = {
     theme: path.resolve(__dirname, './theme'),
     head: [
     themeConfig: {
-        logo: '/icons/icon_light.png',
-        logoDark: '/icons/icon_dark.png',
+        logo: '/logo.svg',
+        logoDark: '/icons-fire-all-gray/web/icon-96.png',
         docsDir: 'docs',
         docsBranch: 'master',
         repo: 'discue/discue-io-docs',
