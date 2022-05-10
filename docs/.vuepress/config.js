@@ -1,4 +1,6 @@
 const anchorPlugin = require('markdown-it-anchor')
+const { viteBundler } = require('@vuepress/bundler-vite');
+const defaultTheme = require('./theme')
 const { path } = require('@vuepress/utils')
 
 // eslint-disable-next-line no-control-regex
@@ -30,7 +32,46 @@ module.exports = {
     lang: 'en-US',
     title: 'discue',
     description: 'Developer documentation for the secure and reliable messaging and queueing service.',
-    darkMode: false,
+    bunder: viteBundler({}),
+    theme: defaultTheme(
+        {
+            darkMode: false,
+            logo: '/logo.svg',
+            logoDark: '/icons-fire-all-gray/web/icon-96.png',
+            editLinkText: 'Improve this page',
+            docsDir: 'docs',
+            docsBranch: 'master',
+            repo: 'discue/discue-io-docs',
+            repoLabel: 'GitHub',
+            sidebarDepth: 4,
+            navbar: [{
+                text: 'Getting Started',
+                link: '/getting-started/',
+            }, {
+                text: 'API Overview',
+                link: '/api-overview/',
+            }, {
+                text: 'API Reference',
+                link: '/api-reference/',
+            }],
+            sidebar: [{
+                text: 'Introduction',
+                link: '/introduction/',
+            }, {
+                text: 'Getting Started',
+                link: '/getting-started/',
+            }, {
+                text: 'API Overview',
+                link: '/api-overview/',
+            }, {
+                text: 'API Best Practices',
+                link: '/api-best-practices/',
+            }, {
+                text: 'API Reference',
+                link: '/api-reference/',
+            }],
+        },
+    ),
     plugins: [
         ["@vuepress/plugin-prismjs", true],
         // https://github.com/shikijs/shiki/blob/main/docs/themes.md
@@ -60,47 +101,9 @@ module.exports = {
         extractHeaders: { level: [2, 3, 4, 5, 6] },
         anchor: false
     },
-    theme: path.resolve(__dirname, './theme'),
     head: [
         ['link', { rel: 'icon', type: "image/png", sizes: "16x16", href: "/icons-fire-all-black/web/favicon.ico" }],
         ['link', { rel: 'icon', type: "image/png", sizes: "32x32", href: "/icons-fire-all-black/web/favicon.ico" }],
         ['link', { rel: "apple-touch-icon", sizes: "152x152", href: "/icons-fire-all-black/web/apple-touch-icon-152x152.png" }]
     ],
-    themeConfig: {
-        darkMode: false,
-        logo: '/logo.svg',
-        logoDark: '/icons-fire-all-gray/web/icon-96.png',
-        editLinkText: 'Improve this page',
-        docsDir: 'docs',
-        docsBranch: 'master',
-        repo: 'discue/discue-io-docs',
-        repoLabel: 'GitHub',
-        sidebarDepth: 4,
-        navbar: [{
-            text: 'Getting Started',
-            link: '/getting-started/',
-        }, {
-            text: 'API Overview',
-            link: '/api-overview/',
-        }, {
-            text: 'API Reference',
-            link: '/api-reference/',
-        }],
-        sidebar: [{
-            text: 'Introduction',
-            link: '/introduction/',
-        }, {
-            text: 'Getting Started',
-            link: '/getting-started/',
-        }, {
-            text: 'API Overview',
-            link: '/api-overview/',
-        }, {
-            text: 'API Best Practices',
-            link: '/api-best-practices/',
-        }, {
-            text: 'API Reference',
-            link: '/api-reference/',
-        }],
-    },
 }
