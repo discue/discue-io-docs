@@ -1,5 +1,7 @@
 const anchorPlugin = require('markdown-it-anchor')
 const { viteBundler } = require('@vuepress/bundler-vite');
+const { shikiPlugin } = require('@vuepress/plugin-shiki')
+
 const defaultTheme = require('./theme')
 const { path } = require('@vuepress/utils')
 
@@ -73,7 +75,8 @@ module.exports = {
         },
     ),
     plugins: [
-        ["@vuepress/plugin-prismjs", true],
+        ["@vuepress/plugin-prismjs", false],
+        shikiPlugin({ theme: 'dark-plus' })
         // https://github.com/shikijs/shiki/blob/main/docs/themes.md
         // ["@vuepress/plugin-shiki", {
         //     theme: 'material-default'
