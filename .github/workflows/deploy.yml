@@ -23,11 +23,11 @@ jobs:
 
     - name: Build
       run: npm run docs:build
+      env:
+        NODE_ENV: production
 
     - name: Add version file
       run: npm pkg get --json version name > docs/.vuepress/dist/_version.json
-      env:
-        NODE_ENV: production
 
     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
