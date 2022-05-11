@@ -14,6 +14,7 @@
   "author": "Stefan Pfaffel",
   "license": "MIT",
   "devDependencies": {
+    "@discue/ui-components": "^0.6.0",
     "markdown-it-anchor": "^8.6.3",
     "markdown-it-attrs": "^4.1.4",
     "nodemon": "^2.0.16",
