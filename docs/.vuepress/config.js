@@ -79,6 +79,10 @@ module.exports = {
         //     theme: 'material-default'
         // }],
     ],
+    clientAppEnhanceFiles: path.resolve(
+        __dirname,
+        './enhance/clientAppEnhance.js'
+    ),
     extendsMarkdown: (md) => {
         md.use(require('markdown-it-attrs'), {
             allowedAttributes: ['id'],
