@@ -1,0 +1,29 @@
+name: deploys
+on:
+  push:
+    branches-ignore:
+      - deploy
+    tags-ignore:
+      - "*"
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@master
+
+    - name: Use Node.js lts/*
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      run: npm run docs:build
+      env:
+        NODE_ENV: production
