@@ -1,0 +1,37 @@
+name: deploys
+on: 
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@master
+
+    - name: Use Node.js lts/*
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      run: npm run docs:build
+
+    - name: Add version file
+      run: npm pkg get --json version name > docs/.vuepress/dist/_version.json
+      env:
+        NODE_ENV: production
+
+    - uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DISCUE_IO_DOCS_ECD49 }}'
+        projectId: discue-io-docs-ecd49
+        channelId: live
