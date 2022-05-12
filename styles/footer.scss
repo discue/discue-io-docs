@@ -1,0 +1,16 @@
+footer {
+    @apply absolute w-full left-0 right-0 p-0;
+}
+
+footer ul {
+    @apply list-none;
+}
+
+.home .footer {
+    border: none !important;
+}
+
+.page footer {
+    border-top: 1px solid var(--c-border);
+    background-color: var(--c-bg-navbar);
+}

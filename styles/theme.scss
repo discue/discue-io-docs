@@ -1,0 +1,11 @@
+.theme-default-content {
+    padding-bottom: 0 !important
+}
+
+.theme-default-content:not(.custom) a:hover {
+    text-decoration: none !important;
+}
+
+.theme-default-content:not(.custom) p {
+    margin-top: 0 !important;
+}

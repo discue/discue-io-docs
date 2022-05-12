@@ -1,0 +1,40 @@
+.component-preview *[class*=" border-b"],
+.component-properties-preview *[class*=" border-b"] {
+    border-bottom-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.component-preview *[class*="hover:border-b"]:hover,
+.component-properties-preview *[class*="hover:border-b"]:hover {
+    border-bottom-style: solid;
+}
+
+.component-properties-preview {
+    input {
+        background: inherit;
+        outline: none;
+    }
+}
+
+.component-preview {
+    background: #dcdcdc;
+
+    * {
+        position: relative !important;
+    }
+
+    ul {
+        @apply list-none my-0;
+        padding-left: inherit;
+    }
+
+    li {
+        @apply list-none bg-gray-50 rounded shadow;
+    }
+
+    .back-to-top {
+        @apply top-0 bottom-0 right-0 left-0;
+    }
+}
