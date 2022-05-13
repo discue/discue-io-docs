@@ -1,0 +1,19 @@
+span.badge {
+    @apply font-bold;
+
+    &.get {
+        @apply bg-green-700;
+    }
+
+    &.update {
+        @apply bg-orange-500;
+    }
+
+    &.post {
+        @apply bg-blue-600;
+    }
+
+    &.delete {
+        @apply bg-red-500;
+    }
+}

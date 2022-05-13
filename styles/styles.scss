@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './back-to-top.scss';
+@import './badge.scss';
 @import './doc-search.scss';
 @import './footer.scss';
 @import './navbar.scss';
@@ -10,10 +11,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.badge {
-    @apply font-bold;
-}
 
 h2 {
     @apply mb-4 !important;
