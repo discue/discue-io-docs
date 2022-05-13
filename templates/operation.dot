@@ -18,6 +18,12 @@
 #### {{= data.methodUpper}} {{=data.method.path}}
 {{?}}>>
 
+<p class="text-lg">
+<span class="font-medium">{{= data.methodUpper}}</span> {{=data.method.path}}
+</p>
+
+{{? data.operation.description}}{{= data.operation.description }}{{?}}
+{{? data.operation.summary && !data.options.tocSummary}}*{{= data.operation.summary }}*{{?}}
 
 {{ data.security = data.operation.security ? data.operation.security : data.api.security; }}
 {{? data.security && data.security.length }}
@@ -25,10 +31,6 @@
 {{??}}
 {{#def.authentication_none}}
 {{?}}
-
-{{? data.operation.summary && !data.options.tocSummary}}*{{= data.operation.summary }}*{{?}}
-
-{{? data.operation.description}}{{= data.operation.description }}{{?}}
 
 {{? data.options.codeSamples || data.operation["x-code-samples"] }}
 
