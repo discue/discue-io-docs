@@ -47,8 +47,6 @@
 
 {{#def.callbacks}}
 
-<br/>
-
 ---
 
 {{= data.tags.endSection }}
