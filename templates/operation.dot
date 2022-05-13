@@ -10,7 +10,14 @@
 {{ data.utils.mergePathParameters(data); }}
 {{ data.utils.getParameters(data); }}
 
+{{? data.operation.operationId }}
+#### {{= data.operation.operationId}}
+{{?}}
+
+{{? !data.operation.operationId }}
 #### {{= data.methodUpper}} {{=data.method.path}}
+{{?}}>>
+
 
 {{ data.security = data.operation.security ? data.operation.security : data.api.security; }}
 {{? data.security && data.security.length }}
