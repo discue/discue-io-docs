@@ -25,12 +25,12 @@
 
 {{? data.options.codeSamples || data.operation["x-code-samples"] }}
 
-##### Examples [#{{=data.method.verb}}-{{=data.normalizedPath}}-examples]
+##### Examples
 {{= data.utils.getCodeSamples(data) }}
 {{?}}
 
 {{? data.operation.requestBody}}
-##### Body [#{{=data.method.verb}}-{{=data.normalizedPath}}-body]
+##### Body
 
 {{? data.bodyParameter.exampleValues.description }}
 > {{= data.bodyParameter.exampleValues.description }}
