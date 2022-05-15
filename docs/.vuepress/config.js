@@ -93,10 +93,6 @@ module.exports = {
             ]
         }),
         shikiPlugin({ theme: 'dark-plus' })
-        // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-        // ["@vuepress/plugin-shiki", {
-        //     theme: 'material-default'
-        // }],
     ],
     clientAppEnhanceFiles: path.resolve(
         __dirname,
