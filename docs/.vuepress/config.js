@@ -4,6 +4,7 @@ const { shikiPlugin } = require('@vuepress/plugin-shiki')
 
 const defaultTheme = require('./theme')
 const { path } = require('@vuepress/utils')
+const { version } = require('../../package.json')
 
 // eslint-disable-next-line no-control-regex
 const rControl = /[\u0000-\u001f]/g
@@ -55,6 +56,14 @@ module.exports = {
             }, {
                 text: 'API Reference',
                 link: '/api-reference/',
+            {
+                text: `v${version}`,
+                children: [
+                    {
+                        text: 'Changelog',
+                        link: 'https://github.com/discue/ui-components/blob/main/CHANGELOG.md',
+                    },
+                ],
             }],
             sidebar: [{
                 text: 'Introduction',
