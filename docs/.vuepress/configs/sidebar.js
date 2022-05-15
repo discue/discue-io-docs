@@ -12,8 +12,8 @@ const getAllFiles = function (dirPath, arrayOfFiles) {
         if (fs.statSync(dirPath + "/" + file).isDirectory()) {
             arrayOfFiles = getAllFiles(join(dirPath, file), arrayOfFiles)
         } else {
-            const link = join('/', dirPath, file)
-                .replace('docs\\', '')
+            const link = join(dirPath, file)
+                .replace('docs', '')
                 .replace('.md', '.html')
                 .replace(/\\/g, '/')
 
