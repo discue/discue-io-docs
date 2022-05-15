@@ -9,8 +9,9 @@ module.exports = options => {
             Layout: path.resolve(__dirname, './layouts/Layout.vue')
         },
         alias: {
+            '@theme/AutoLink.vue': path.resolve(__dirname, './components/AutoLinkWithHttpEndpointBadge.vue'),
             '@theme/HomeFooter.vue': path.resolve(__dirname, './layouts/HomeFooter.vue'),
-            '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue'),
+            '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue')
         }
     }
 }
