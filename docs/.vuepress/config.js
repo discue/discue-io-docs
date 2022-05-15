@@ -1,6 +1,7 @@
 const anchorPlugin = require('markdown-it-anchor')
 const { viteBundler } = require('@vuepress/bundler-vite');
 const { shikiPlugin } = require('@vuepress/plugin-shiki')
+const { sitemapPlugin } = require('vuepress-plugin-sitemap2')
 
 const defaultTheme = require('./theme')
 const { path } = require('@vuepress/utils')
@@ -85,6 +86,12 @@ module.exports = {
     ),
     plugins: [
         ["@vuepress/plugin-prismjs", false],
+        sitemapPlugin({
+            hostname: 'https://docs.discue.io',
+            excludeUrls: [
+                'https://docs.discue.io/api-reference/'
+            ]
+        }),
         shikiPlugin({ theme: 'dark-plus' })
         // https://github.com/shikijs/shiki/blob/main/docs/themes.md
         // ["@vuepress/plugin-shiki", {
