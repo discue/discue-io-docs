@@ -5,7 +5,7 @@ span.badge {
         @apply bg-green-700;
     }
 
-    &.update {
+    &.put {
         @apply bg-orange-500;
     }
 
@@ -14,6 +14,12 @@ span.badge {
     }
 
     &.delete {
-        @apply bg-red-500;
+        @apply bg-red-700;
+    }
+}
+
+sidebar-item {
+    .badge {
+        @apply mr-1
     }
 }
