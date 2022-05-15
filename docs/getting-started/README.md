@@ -3,7 +3,7 @@
 ## Prerequisites
 In order to getting started you need a valid and enabled account. To create an account please visit our [account creation](https://www.discue.io/registration/create-account) page. The onboarding pages will guide you through the onboarding process to create an [organization](/api-overview/#organizations) and an API key. 
 
-## Create a queue
+## How to create your first queue
 After you have created your API Key you can start with the setup. 
 Our [REST API](/api-overview/) provides endpoints for creation and maintenance of [queues](/api-reference/#queues), [listeners](/api-reference/#listeners), and [messages](/api-reference/#messages).
 
@@ -104,7 +104,7 @@ func main() {
 
 Other response types and status codes are documented in the [API reference](/api-reference/#put-queues).
 
-## Create a listener
+## How to create your first listener
 As mentioned above, **a listener will be invoked whenever a message was put on the target queue**. No messages are lost. If a listener becomes unavailable, or does not respond, **the delivery will be retried** by our broadcast function.
 
 The [PUT](/api-reference/#put-queues-queue-id-listeners) endpoint of the [listeners](/api-reference/#listeners) resource takes one JSON object with three mandatory values:
@@ -202,7 +202,7 @@ func main() {
 
 Other response types and status codes are documented in the [API reference](/api-reference/#put-queues-queue-id-listeners).
 
-## Create and submit a message
+## How to create and submit your first message
 
 The [PUT](/api-reference/#put-queues-queue-id-messages) endpoint of the [messages](/api-reference/#messages) resource takes one JSON object with three mandatory values:
 - data: `the message string`
