@@ -100,7 +100,6 @@ module.exports = {
             allowedAttributes: ['id'],
             leftDelimiter: '[',
             rightDelimiter: ']',
-            allowedAttributes: []  // empty array = all attributes are allowed
         })
         md.use(anchorPlugin, {
             level: [1, 2, 3, 4, 5, 6],
