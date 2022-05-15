@@ -11,12 +11,12 @@
 {{ data.utils.getParameters(data); }}
 
 {{? data.operation.operationId }}
-#### {{= data.operation.operationId}}
+# {{= data.operation.operationId}}
 {{?}}
 
 {{? !data.operation.operationId }}
-#### {{= data.methodUpper}} {{=data.method.path}}
-{{?}}>>
+# {{= data.methodUpper}} {{=data.method.path}}
+{{?}}
 
 <p class="text-lg">
 <span class="font-medium">{{= data.methodUpper}}</span> {{=data.method.path}}
@@ -34,12 +34,12 @@
 
 {{? data.options.codeSamples || data.operation["x-code-samples"] }}
 
-##### Examples
+## Examples
 {{= data.utils.getCodeSamples(data) }}
 {{?}}
 
 {{? data.operation.requestBody}}
-##### Body
+## Body
 
 {{? data.bodyParameter.exampleValues.description }}
 > {{= data.bodyParameter.exampleValues.description }}
