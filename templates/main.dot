@@ -131,8 +131,6 @@ Base URLs:
 
 {{?}}
 
-{{#def.footer}}
-
 {{? data.options.discovery}}
 {{#def.discovery}}
 {{?}}
