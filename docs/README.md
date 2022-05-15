@@ -6,8 +6,8 @@ actions:
   - text: Introduction
     link: /introduction/#components
     type: primary
-  - text: Get Started
-    link: /getting-started/#create-a-queue
+  - text: How to get started
+    link: /getting-started/#prerequisites
     type: secondary
 features:
   - title: Simple
