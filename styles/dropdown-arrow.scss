@@ -1,0 +1,5 @@
+.sidebar-item.collapsible:not(.sidebar-heading), .navbar-dropdown-title {
+    .arrow {
+        @apply ml-2 !important;
+    }
+}
