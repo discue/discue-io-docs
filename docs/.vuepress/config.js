@@ -2,7 +2,6 @@ const { viteBundler } = require('@vuepress/bundler-vite');
 
 const defaultTheme = require('./theme')
 
-const clientAppEnhanceFiles = require('./configs/client-app-enhance-files')
 const head = require('./configs/head')
 const extendsMarkdown = require('./configs/extends-markdown')
 const markdown = require('./configs/markdown')
@@ -31,7 +30,6 @@ module.exports = {
         },
     ),
     plugins,
-    clientAppEnhanceFiles,
     extendsMarkdown,
     markdown,
     head,
