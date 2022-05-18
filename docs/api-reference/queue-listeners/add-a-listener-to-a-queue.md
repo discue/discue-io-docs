@@ -7,10 +7,6 @@ language_tabs:
   - go: Go
 toc_footers: []
 includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 3
 api:
   method: post
   path: /queues/{queue_id}/listeners
@@ -133,6 +129,9 @@ func main() {
 |queue_id|path|string(uuid)|✔|Id of the target queue|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[CreateListenerRequest](#schemacreatelistenerrequest)|✔|none|
+|» name|body|string|✔|none|
+|» notify_url|body|string(url)|✔|none|
+|» liveness_url|body|string(url)|✔|none|
 
 ## Responses 
 

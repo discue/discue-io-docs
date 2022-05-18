@@ -7,10 +7,6 @@ language_tabs:
   - go: Go
 toc_footers: []
 includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 3
 api:
   method: delete
   path: /api_keys/{api_key_id}

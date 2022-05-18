@@ -7,10 +7,6 @@ language_tabs:
   - go: Go
 toc_footers: []
 includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 3
 api:
   method: put
   path: /queues/{queue_id}/messages/{message_id}
@@ -128,6 +124,7 @@ func main() {
 |message_id|path|string(uuid)|✔|Id of the target message|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[UpdateMessageRequest](#schemaupdatemessagerequest)| ❌ |none|
+|» name|body|[ResourceName](#resourcename)| ❌ |none|
 
 ## Responses 
 

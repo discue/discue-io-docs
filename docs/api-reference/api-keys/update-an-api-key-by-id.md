@@ -7,10 +7,6 @@ language_tabs:
   - go: Go
 toc_footers: []
 includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 3
 api:
   method: put
   path: /api_keys/{api_key_id}
@@ -130,6 +126,15 @@ func main() {
 |api_key_id|path|string(uuid)|✔|Id of the api key|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[UpdateApiKeyRequest](#schemaupdateapikeyrequest)| ❌ |none|
+|» name|body|[ResourceName](#resourcename)| ❌ |none|
+|» status|body|string| ❌ |none|
+
+## Enumerated Values
+
+|Parameter|Value|
+|---|---|
+|» status|disabled|
+|» status|enabled|
 
 ## Responses 
 

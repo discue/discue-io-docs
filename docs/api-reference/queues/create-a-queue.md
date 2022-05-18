@@ -7,10 +7,6 @@ language_tabs:
   - go: Go
 toc_footers: []
 includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 3
 api:
   method: post
   path: /queues
@@ -126,6 +122,7 @@ func main() {
 |---|---|---|---|---|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[UpdateQueueRequest](#schemaupdatequeuerequest)|✔|none|
+|» name|body|string| ❌ |none|
 
 ## Responses 
 
