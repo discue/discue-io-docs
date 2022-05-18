@@ -123,7 +123,7 @@ func main() {
         "id": "string",
         "name": "string",
         "liveness": {
-          "state": "[",
+          "state": "stable",
           "success_count": 1,
           "last_success_at": 1644262937466,
           "failure_count": 1,
@@ -135,7 +135,9 @@ func main() {
           "acknowledged_count": 312,
           "last_success_at": 1644616838173,
           "last_failure_at": 1644616818173,
-          "missed": "[Object]",
+          "missed": [
+            "fb445832-50f7-4471-a0a9-d0def6d5951f"
+          ],
           "missed_count": 1
         },
         "notify_url": "https://myapp.io/deletion/listener",
