@@ -7,4 +7,4 @@ declare -r ENVIRONMENT_FILE="../discue-io-api-docs/generate-api-doc.config.json"
 
 declare -r API_INPUT_FILE="../discue-io-api/api.yaml"
 
-cd ../widdershins && node widdershins -e "${ENVIRONMENT_FILE}" -o "${INTERMEDIATE_FILE}" "${API_INPUT_FILE}" 
+cd ../openapi3-to-vuepress2-markdown && node widdershins -e "${ENVIRONMENT_FILE}" -o "${INTERMEDIATE_FILE}" "${API_INPUT_FILE}" 
