@@ -1,5 +1,3 @@
-const { viteBundler } = require('@vuepress/bundler-vite');
-
 const defaultTheme = require('./theme')
 
 const head = require('./configs/head')
@@ -13,7 +11,6 @@ module.exports = {
     lang: 'en-US',
     title: 'discue',
     description: 'Developer documentation for the secure and reliable messaging and queueing service.',
-    bunder: viteBundler({}),
     theme: defaultTheme(
         {
             darkMode: false,
