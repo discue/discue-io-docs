@@ -26,7 +26,12 @@ If no queue or listener with the given ids can be found, the endpoint returns st
 Only **mutable** properties like `name`, `notify_url`, `liveness_url` can be updated. 
 
 ::: tip Authentication
-To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
+**The target organization for this request will be determined by the supplied access token.** 
+
+As a prerequisite you need to **[create an account](https://www.discue.io/registration/create-account)** and follow
+the onboarding process to also **create an organizatio**n and **an API key**.
+
+See also: [Authentication](/getting-started/#prerequisites).
 :::
 
 ## Examples

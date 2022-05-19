@@ -28,7 +28,12 @@ If no queue with the given `queue_id` can be found, the endpoint returns status 
 Only mutable properties like `name` can be updated. 
 
 ::: tip Authentication
-To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
+**The target organization for this request will be determined by the supplied access token.** 
+
+As a prerequisite you need to **[create an account](https://www.discue.io/registration/create-account)** and follow
+the onboarding process to also **create an organizatio**n and **an API key**.
+
+See also: [Authentication](/getting-started/#prerequisites).
 :::
 
 ## Examples
