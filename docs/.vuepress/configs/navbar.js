@@ -25,7 +25,7 @@ module.exports = [{
     children: [
         {
             text: 'Changelog',
-            link: 'https://github.com/discue/ui-components/blob/main/CHANGELOG.md',
+            link: 'https://github.com/discue/api-docs/blob/main/CHANGELOG.md',
         },
     ],
 }]

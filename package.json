@@ -9,8 +9,8 @@
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
     "docs:build": "npm run docs:styles && vuepress build docs",
     "docs:styles": "postcss styles/styles.scss -o docs/.vuepress/styles/index.scss",
-    "release": "standard-version && git push --follow-tags origin master",
-    "release-minor": "standard-version --release-as minor && git push --follow-tags origin master"
+    "release": "standard-version && git push --follow-tags origin main",
+    "release-minor": "standard-version --release-as minor && git push --follow-tags origin main"
   },
   "keywords": [],
   "author": "Stefan Pfaffel",

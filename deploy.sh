@@ -2,6 +2,6 @@
 
 git switch -C deploy
 git pull origin deploy
-git merge master
+git merge main
 git push origin deploy
-git switch -C master
+git switch -C main
