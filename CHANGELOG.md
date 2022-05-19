@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/discue/api-docs/compare/v0.2.0...v0.3.0) (2022-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **docs:** in VuePress Beta 2.45
+
+### Bug Fixes
+
+* **sidebar:** links do not get replaced correctly ([c524096](https://github.com/discue/api-docs/commit/c5240966816e03439d59991462ffced3ec83407c))
+
+
+### Chores
+
+* **deps-dev:** bump firebase-tools from 10.9.0 to 10.9.2 ([7556f68](https://github.com/discue/api-docs/commit/7556f685d2d2bdff7ec516d1433e254ef431fde3))
+* **deps-dev:** bump markdown-it-anchor from 8.6.3 to 8.6.4 ([03bfa72](https://github.com/discue/api-docs/commit/03bfa723771c23d7a0c24503e850bbe31fdb50db))
+* **deps-dev:** bump standard-version from 9.3.2 to 9.5.0 ([57b93c2](https://github.com/discue/api-docs/commit/57b93c29df9c32f133bbabb690f83d417ae71553))
+* **deps-dev:** bump vuepress from 2.0.0-beta.43 to 2.0.0-beta.45 ([7d0b5f4](https://github.com/discue/api-docs/commit/7d0b5f43e7cc9513e2c5dc1f425ed562fce80dc7))
+* **deps-dev:** bump vuepress from 2.0.0-beta.43 to 2.0.0-beta.45 ([863fbc5](https://github.com/discue/api-docs/commit/863fbc5cc8dcd3cf4a17ea327625b642df00631b))
+* do not pass template folder ([a9d18f4](https://github.com/discue/api-docs/commit/a9d18f4afc1076035a41562cf81ea6b503e473b6))
+* **docs:** do not truncate examples ([5704f3f](https://github.com/discue/api-docs/commit/5704f3f8792c6deb10117c1dba3113c878518413))
+* **docs:** use client config file ([fd8edf5](https://github.com/discue/api-docs/commit/fd8edf5f07f921aef4cd13efe3d7e03630a8d4b6))
+* move templates to openapi-2-markdown repo ([53afc05](https://github.com/discue/api-docs/commit/53afc05505c62df2ea98ac1c09f46c5b260e823e))
+* rename run script ([f0f716b](https://github.com/discue/api-docs/commit/f0f716bced6960ea26c57f75ed97f117de47228b))
+* update api to markdown command ([35347a2](https://github.com/discue/api-docs/commit/35347a29cebe23408222ef740e20753c2ebe005e))
+* update readme ([258f0e3](https://github.com/discue/api-docs/commit/258f0e3d5d100182cabde2965f60653577289694))
+* update repo name ([a16b832](https://github.com/discue/api-docs/commit/a16b832f71eed55bdd525a447dda872939908283))
+* use new openapi to markdown repo name ([64bdca1](https://github.com/discue/api-docs/commit/64bdca167e6d6ceb005b6b91ea090506ed8a7b44))
+
 ## 0.2.0 (2022-05-15)
 
 

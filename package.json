@@ -1,6 +1,6 @@
 {
   "name": "discue-io-api-docs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Documentation module of discue.io: A secure and reliable messaging and queueing service.",
   "main": "index.js",
   "private": true,
