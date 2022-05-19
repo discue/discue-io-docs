@@ -29,8 +29,6 @@ will, however, return meta data of a key like the time it was created and its cu
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.
 
-*Get an api key by id*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

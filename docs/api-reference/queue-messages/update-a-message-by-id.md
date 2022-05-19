@@ -20,8 +20,6 @@ api:
 <span class="font-medium">PUT</span> /queues/{queue_id}/messages/{message_id}
 </p>
 
-*Update a message of a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

@@ -26,8 +26,6 @@ If no queue or message with the given ids can be found, the endpoint returns sta
 <Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
 <strong>the target message will be deleted forever</strong>. This process cannot be reverted.
 
-*Deletes a message of a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

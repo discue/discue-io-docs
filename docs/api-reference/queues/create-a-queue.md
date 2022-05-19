@@ -38,8 +38,6 @@ creation of a queue is a prerequisite for the following endpoints:
 - [Add a message to a queue](/api-reference/queue-messages/add-a-message-to-a-queue.html)
 - [Delete a message by id](/api-reference/queue-messages/delete-a-message-by-id.html)
 
-*Add a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

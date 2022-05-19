@@ -29,8 +29,6 @@ will, however, return meta data of each key like the time it was created and its
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.
 
-*Return all api keys with redacted info*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

@@ -25,8 +25,6 @@ If no queue or listener with the given ids can be found, the endpoint returns st
 
 Only **mutable** properties like `name`, `notify_url`, `liveness_url` can be updated. 
 
-*Update a listener of a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

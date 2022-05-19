@@ -28,8 +28,6 @@ can be found, the endpoint returns status `404`.
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.
 
-*Get a queue by id*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

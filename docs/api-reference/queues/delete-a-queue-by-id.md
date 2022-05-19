@@ -27,8 +27,6 @@ If no queue with the given `queue_id` can be found, the endpoint returns status 
 <strong>not only the target queue will be deleted, but also all associated listeners and messages</strong>. 
 There is no going back, only emptiness.
 
-*Delete a queue by id*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

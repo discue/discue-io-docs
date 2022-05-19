@@ -25,8 +25,6 @@ Users who need direct acces to the resources can be assigned to an organizations
 
 <Badge type="get" text="Info" vertical="middle"/> In this context an api client and an organization can be used synonymously. 
 
-*Create an api client*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

@@ -27,8 +27,6 @@ If no queue with the given `queue_id` can be found, the endpoint returns status 
 
 Only mutable properties like `name` can be updated. 
 
-*Update a queue by id*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

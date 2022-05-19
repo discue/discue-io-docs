@@ -29,8 +29,6 @@ Beforehand, use [this endpoint](/api-reference/queues/create-a-queue.html) to cr
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.
 
-*Returns a message of a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

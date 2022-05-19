@@ -27,8 +27,6 @@ Returns `404` if no api key was found with the given `api_key_id`.
 <strong>the target api key will be deleted.</strong> 
 There is no going back, only emptiness.
 
-*Delete api key*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

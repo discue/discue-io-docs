@@ -33,8 +33,6 @@ Discue will keep track of all successful delivieres and will initiate redeliveri
 To get an overview of all stored messages, you can call the 
 [get all messages endpoint](/api-reference/queue-messages/get-all-messages.html).
 
-*Add a message to a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

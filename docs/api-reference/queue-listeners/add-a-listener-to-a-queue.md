@@ -31,8 +31,6 @@ must be passed to the following listener endpoints to update or delete the liste
 To get an overview of all registered listeners, you can always call the 
 [get all listeners endpoint](/api-reference/queue-listeners/get-all-listeners.html).
 
-*Add a listener to a queue*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::

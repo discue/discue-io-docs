@@ -30,8 +30,6 @@ of **all queues**. This can lead to potentially high response times.
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.
 
-*Returns all messages of all queues*
-
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
 :::
