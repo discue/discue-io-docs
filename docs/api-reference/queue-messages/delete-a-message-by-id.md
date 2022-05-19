@@ -20,6 +20,12 @@ api:
 <span class="font-medium">DELETE</span> /queues/{queue_id}/messages/{message_id}
 </p>
 
+Deletes a message by id. To identify the target message a `queue_id` and a `message_id` must be passed as a path parameter. 
+If no queue or message with the given ids can be found, the endpoint returns status `404`.
+
+<Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
+<strong>the target message will be deleted forever</strong>. This process cannot be reverted.
+
 *Deletes a message of a queue*
 
 ::: tip Authentication

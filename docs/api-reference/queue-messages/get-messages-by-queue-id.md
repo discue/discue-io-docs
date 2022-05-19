@@ -20,6 +20,15 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}/messages
 </p>
 
+Returns all messages of a queue by id. Callees must pass a `queue_id` that was returned
+during [creation](/api-reference/queue-messages/add-a-message-to-a-queue.html) of the target
+queue.
+
+This endpoint can potentially return a large number of messages. This can lead to higher than average response times. 
+
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
+
 *Returns a list of queue messages*
 
 ::: tip Authentication

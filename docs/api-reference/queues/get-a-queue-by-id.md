@@ -20,6 +20,14 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}
 </p>
 
+Returns a queue by id. **The target queue must be identified via the `queue_id` path parameter and
+must be associated with the current organization**. A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). If no queue with the given `queue_id` 
+can be found, the endpoint returns status `404`.
+
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
+
 *Get a queue by id*
 
 ::: tip Authentication

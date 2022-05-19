@@ -20,6 +20,19 @@ api:
 <span class="font-medium">POST</span> /queues/{queue_id}/messages
 </p>
 
+Creates a new message and adds the message to the target queue. The `queue_id` path parameter
+must point to an existing queue created by [add a queue endpoint](/api-reference/queues/create-a-queue.html).
+
+This endpoint returns the messages's unique identifier, the `message_id`. This identifier
+must be passed to the following endpoint to delete the message:
+- [Delete a message by id](/api-reference/queue-messages/delete-a-message-by-id.html)
+
+The message will eventually be sent to all listeners, that were created before the message was. 
+Discue will keep track of all successful delivieres and will initiate redeliveries in case of unsuccessful ones. .
+
+To get an overview of all stored messages, you can call the 
+[get all messages endpoint](/api-reference/queue-messages/get-all-messages.html).
+
 *Add a message to a queue*
 
 ::: tip Authentication

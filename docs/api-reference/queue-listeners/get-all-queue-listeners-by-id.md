@@ -8,26 +8,28 @@ language_tabs:
 toc_footers: []
 includes: []
 api:
-  method: delete
-  path: /queues/{queue_id}
-  name: Delete a queue by id
+  method: get
+  path: /queues/{queue_id}/listeners
+  name: Get all queue listeners by id
 
 ---
 
-# Delete a queue by id
+# Get all queue listeners by id
 
 <p class="text-lg">
-<span class="font-medium">DELETE</span> /queues/{queue_id}
+<span class="font-medium">GET</span> /queues/{queue_id}/listeners
 </p>
 
-Updates a queue by id. Obviously, **only existing queues can be deleted**. 
-If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
+Returns all listeners of a queue with  `queue_id`. **The target queue must exist 
+and must be associated with the current organization**. If the queue was not created by calling the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html), or the 
+`queue_id` is wrong, the endpoint returns status `404`. Use this method 
+if you are only interested in the listeners of a specific queue.
 
-<Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
-<strong>not only the target queue will be deleted, but also all associated listeners and messages</strong>. 
-There is no going back, only emptiness.
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
 
-*Delete a queue by id*
+*Returns all listeners of a queue*
 
 ::: tip Authentication
 To perform this operation, you must provide a valid api key. See [Authentication](/getting-started/#prerequisites).
@@ -37,7 +39,7 @@ To perform this operation, you must provide a valid api key. See [Authentication
 <CodeGroup><CodeGroupItem title="shell">
 
 ```shell
-curl -X DELETE http://api.discue.io/v1/queues/{queue_id} \
+curl -X GET http://api.discue.io/v1/queues/{queue_id}/listeners \
   -H 'Accept: application/json' \
   -H 'X-API-KEY: API_KEY'
 ```
@@ -52,8 +54,8 @@ const headers = {
   'X-API-KEY':'API_KEY'
 }
 
-const response = await fetch('http://api.discue.io/v1/queues/{queue_id}', {
-  method: 'DELETE',  headers
+const response = await fetch('http://api.discue.io/v1/queues/{queue_id}/listeners', {
+  method: 'GET',  headers
 })
 
 const body = await response.json()
@@ -70,7 +72,7 @@ headers = {
   'X-API-KEY': 'API_KEY'
 }
 
-r = requests.delete('http://api.discue.io/v1/queues/{queue_id}', headers = headers)
+r = requests.get('http://api.discue.io/v1/queues/{queue_id}/listeners', headers = headers)
 ```
 
 </CodeGroupItem>
@@ -93,7 +95,7 @@ func main() {
   }
 
   data := bytes.NewBuffer([]byte{jsonReq})
-  req, err := http.NewRequest("DELETE", "http://api.discue.io/v1/queues/{queue_id}", data)
+  req, err := http.NewRequest("GET", "http://api.discue.io/v1/queues/{queue_id}/listeners", data)
   req.Header = headers
 
   client := &http.Client{}
@@ -108,10 +110,58 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|queue_id|path|string(uuid)|✔|Id of the target queue|
+|_embed|query|boolean| ❌ |Embed full resources in response payload|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 
+
+::: tip 200 Response
+:::
+
+```json
+{
+  "listeners": [
+    {
+      "id": "0644659f-b47b-4668-86dd-a496cb7fbc76",
+      "name": "myapp.io/delete-user-listener-64fae19"
+    }
+  ],
+  "_embedded": {
+    "listeners": [
+      {
+        "id": "string",
+        "name": "string",
+        "liveness": {
+          "state": "stable",
+          "success_count": 1,
+          "last_success_at": 1644262937466,
+          "failure_count": 1,
+          "last_failure_status": 500,
+          "last_failure_at": 1644262937466,
+          "last_failure_msg": 1644262937466
+        },
+        "messages": {
+          "acknowledged_count": 312,
+          "last_success_at": 1644616838173,
+          "last_failure_at": 1644616818173,
+          "missed": [
+            "fb445832-50f7-4471-a0a9-d0def6d5951f"
+          ],
+          "missed_count": 1
+        },
+        "notify_url": "https://myapp.io/deletion/listener",
+        "liveness_url": "https://myapp.io/live"
+      }
+    ]
+  },
+  "_links": {
+    "self": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/listeners",
+    "myapp.io/delete-user-listener-64fae19": {
+      "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/listeners/0644659f-b47b-4668-86dd-a496cb7fbc76"
+    }
+  }
+}
+```
 
 ::: tip 400 Response
 :::
@@ -265,7 +315,7 @@ func main() {
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|None|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetQueueListenersResponse](#getqueuelistenersresponse)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|Inline|
 |402|[Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2)|Payment Required|Inline|

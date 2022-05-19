@@ -20,6 +20,17 @@ api:
 <span class="font-medium">POST</span> /queues/{queue_id}/listeners
 </p>
 
+Creates a new listener for a queue associated with the current organization. The `queue_id` path parameter
+must point to an existing queue created by [add a queue endpoint](/api-reference/queues/create-a-queue.html).
+
+This endpoint returns the listeners's unique identifier, the `listener_id`. This identifier
+must be passed to the following listener endpoints to update or delete the listener. 
+- [update a listener by id](/api-reference/queue-listeners/update-a-listener-by-id.html), or to 
+- [delete a listener by id](/api-reference/queue-listeners/delete-a-listener-by-id.html).
+
+To get an overview of all registered listeners, you can always call the 
+[get all listeners endpoint](/api-reference/queue-listeners/get-all-listeners.html).
+
 *Add a listener to a queue*
 
 ::: tip Authentication

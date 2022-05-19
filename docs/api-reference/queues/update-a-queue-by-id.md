@@ -20,6 +20,13 @@ api:
 <span class="font-medium">PUT</span> /queues/{queue_id}
 </p>
 
+Updates a queue by id. A `queue_id` must be passed as a path parameter. A valid `queue_id` 
+is created and returned during the queue creation process, which can be initiated by calling the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html)
+If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
+
+Only mutable properties like `name` can be updated. 
+
 *Update a queue by id*
 
 ::: tip Authentication

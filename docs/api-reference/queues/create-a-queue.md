@@ -20,6 +20,24 @@ api:
 <span class="font-medium">POST</span> /queues
 </p>
 
+Creates a new queue associated with the current organization.
+
+This endpoint returns the queue's unique identifier, the `queue_id`. This identifier
+can be used for subsequent requests to 
+- [update a queue](/api-reference/queues/update-a-queue-by-id.html), or to 
+- [delete a queue](/api-reference/queues/delete-a-queue-by-id.html).
+
+Additionally, the `queue_id` is necessary to create and update `Listeners` and `Messages`.Thus, the 
+creation of a queue is a prerequisite for the following endpoints: 
+- [Get a listener by id](/api-reference/queue-listeners/get-a-listener-by-id.html)
+- [Add a listener to a queue](/api-reference/queue-listeners/add-a-listener-to-a-queue.html)
+- [Update  a listener by id](/api-reference/queue-listeners/update-a-listener-by-id.html)
+- [Delete a listener by id](/api-reference/queue-listeners/delete-a-listener-by-id.html)
+- [Get a message by id](/api-reference/queue-messages/get-a-message-by-id.html)
+- [Get all messages of a queue](/api-reference/queue-messages/get-messages-by-queue-id.html)
+- [Add a message to a queue](/api-reference/queue-messages/add-a-message-to-a-queue.html)
+- [Delete a message by id](/api-reference/queue-messages/delete-a-message-by-id.html)
+
 *Add a queue*
 
 ::: tip Authentication

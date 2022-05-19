@@ -20,6 +20,15 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}/messages/{message_id}
 </p>
 
+Returns a message by id. Requires a valid `queue_id` and `message_id`.
+If no queue or message with the given ids can be found, the endpoint returns status `404`.
+
+Beforehand, use [this endpoint](/api-reference/queues/create-a-queue.html) to create a queue, and 
+[this endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html) to add a message to it.
+
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
+
 *Returns a message of a queue*
 
 ::: tip Authentication

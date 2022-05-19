@@ -20,6 +20,11 @@ api:
 <span class="font-medium">POST</span> /api_keys
 </p>
 
+Creates a new API key and returns the actual key. 
+
+<Badge type="warning" text="Note" vertical="middle"/> For security reasons, the 
+API key will only be returned once after its creation.
+
 *Create a new api key*
 
 ::: tip Authentication

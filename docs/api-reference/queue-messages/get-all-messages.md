@@ -20,6 +20,16 @@ api:
 <span class="font-medium">GET</span> /messages
 </p>
 
+Returns the list of all messages associated with the current organization. Use this method
+to get an overview of all messages created via the
+[add a message to a queue endpoint](/api-reference/queue-messages/add-a-message-to-a-queue.html).
+
+As this endpoint is not bound to a specific queue, it will return **all messages**
+of **all queues**. This can lead to potentially high response times. 
+
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
+
 *Returns all messages of all queues*
 
 ::: tip Authentication

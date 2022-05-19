@@ -20,6 +20,13 @@ api:
 <span class="font-medium">DELETE</span> /api_keys/{api_key_id}
 </p>
 
+Updates an api key by id. Requires the id of the target api to be passed via path parameter. 
+Returns `404` if no api key was found with the given `api_key_id`. 
+
+<Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
+<strong>the target api key will be deleted.</strong> 
+There is no going back, only emptiness.
+
 *Delete api key*
 
 ::: tip Authentication
