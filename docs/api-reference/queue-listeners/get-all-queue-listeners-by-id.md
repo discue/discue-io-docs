@@ -20,11 +20,14 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}/listeners
 </p>
 
-Returns all listeners of a queue with  `queue_id`. **The target queue must exist 
-and must be associated with the current organization**. If the queue was not created by calling the 
-[queue creation endpoint](/api-reference/queues/create-a-queue.html), or the 
-`queue_id` is wrong, the endpoint returns status `404`. Use this method 
-if you are only interested in the listeners of a specific queue.
+**Returns** all listeners of the queue with  `queue_id`. **Requires** the target 
+`queue_id` as a path parameter.
+
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). 
+If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
+
+Use this method if you are only interested in the listeners of a specific queue.
 
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.

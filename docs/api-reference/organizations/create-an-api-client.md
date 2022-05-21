@@ -20,10 +20,12 @@ api:
 <span class="font-medium">POST</span> /api_clients
 </p>
 
-Creates a new api client. **An api client groups resources like queues, listeners and messages**.
+**Creates a new api client**. 
+
+**An api client groups resources like queues, listeners and messages**.
 Users who need direct acces to the resources can be assigned to an organizations, too. 
 
-<Badge type="get" text="Info" vertical="middle"/> In this context an api client and an organization can be used synonymously. 
+<Badge type="get" text="Info" vertical="middle"/> In this context an api client and an organization can be used synonymously.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 

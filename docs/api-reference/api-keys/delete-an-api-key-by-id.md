@@ -20,8 +20,14 @@ api:
 <span class="font-medium">DELETE</span> /api_keys/{api_key_id}
 </p>
 
-Updates an api key by id. Requires the id of the target api to be passed via path parameter. 
-Returns `404` if no api key was found with the given `api_key_id`. 
+**Deletes** an api key by id. **Requires** the target 
+`api_key_id` as a path parameter.
+
+A valid `api_key_id` is one that was returned by the 
+[api key creation endpoint](/api-reference/api-keys/create-an-api-key.html).
+If no api key can be found with the given `api_key_id`, the endpoint returns status `404`.
+
+Returns `404` if no api key was found with the given `api_key_id`.
 
 <Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
 <strong>the target api key will be deleted.</strong> 

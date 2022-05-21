@@ -20,8 +20,12 @@ api:
 <span class="font-medium">DELETE</span> /queues/{queue_id}/listeners/{listener_id}
 </p>
 
-Deletes a listener by id. To identify the target listener a `queue_id` and a `listener_id` must be passed as a path parameter. 
+**Deletes** a listener by id. Requires a valid `queue_id` and `listener_id` as path parameters.
 If no queue or listener with the given ids can be found, the endpoint returns status `404`.
+
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). The `listener_id` is the one 
+returned by the [create listener endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html).
 
 <Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint
 <strong>the target listener will be deleted and sent to the shadow realm</strong>. This process cannot be reverted.

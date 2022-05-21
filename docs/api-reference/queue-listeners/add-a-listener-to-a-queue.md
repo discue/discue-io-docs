@@ -20,8 +20,12 @@ api:
 <span class="font-medium">POST</span> /queues/{queue_id}/listeners
 </p>
 
-Creates a new listener for a queue associated with the current organization. The `queue_id` path parameter
-must point to an existing queue created by [add a queue endpoint](/api-reference/queues/create-a-queue.html).
+**Creates** a new listener for a queue. **Requires** the 
+target `queue_id` as a path parameter.
+
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). 
+If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
 
 This endpoint returns the listeners's unique identifier, the `listener_id`. This identifier
 must be passed to the following listener endpoints to update or delete the listener. 

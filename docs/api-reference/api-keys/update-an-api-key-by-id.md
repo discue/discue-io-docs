@@ -20,9 +20,16 @@ api:
 <span class="font-medium">PUT</span> /api_keys/{api_key_id}
 </p>
 
-Updates an api key by id. Requires the id of the target api to be passed via path parameter. 
+**Updates** an api key by id. **Requires** the target 
+`api_key_id` as a path parameter.
 
-Returns `404` if no api key was found with the given `api_key_id`. 
+A valid `api_key_id` is one that was returned by the 
+[api key creation endpoint](/api-reference/api-keys/create-an-api-key.html).
+If no api key can be found with the given `api_key_id`, the endpoint returns status `404`.
+
+Returns `404` if no api key was found with the given `api_key_id`.
+
+Only mutable properties like `name` can be updated.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 

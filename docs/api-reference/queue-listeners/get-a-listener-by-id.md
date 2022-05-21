@@ -20,11 +20,12 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}/listeners/{listener_id}
 </p>
 
-Returns a listener by id. Requires a valid `queue_id` and `listener_id` as prerequisite.
+**Returns** a queue listener by id. Requires a valid `queue_id` and `listener_id` as path parameters.
 If no queue or listener with the given ids can be found, the endpoint returns status `404`.
 
-Use [this endpoint](/api-reference/queues/create-a-queue.html) to create a queue, and 
-[this endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html) to create a listener.
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). The `listener_id` is the one 
+returned by the [create listener endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html).
 
 The result may be inconistent as in not update-to-date as results may be cached
 for a short period of time.

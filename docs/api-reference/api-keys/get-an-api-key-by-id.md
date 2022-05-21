@@ -20,8 +20,12 @@ api:
 <span class="font-medium">GET</span> /api_keys/{api_key_id}
 </p>
 
-Returns an api key by id. The api key will be identified by the required `api_key_id` path parameter.
-In case a key cannot be found, the endpoint will return `404`.
+**Returns** an api key by id. **Requires** the target 
+`api_key_id` as a path parameter.
+
+A valid `api_key_id` is one that was returned by the 
+[api key creation endpoint](/api-reference/api-keys/create-an-api-key.html).
+If no api key can be found with the given `api_key_id`, the endpoint returns status `404`.
 
 All returned keys are redacted. Thus, the endpoint never returns the actual key value. The endpoint
 will, however, return meta data of a key like the time it was created and its current status.

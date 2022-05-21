@@ -20,7 +20,10 @@ api:
 <span class="font-medium">DELETE</span> /queues/{queue_id}
 </p>
 
-Updates a queue by id. Obviously, **only existing queues can be deleted**. 
+**Deletes** a queue by id. **Requires** the target `queue_id` as a path parameter.
+
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). 
 If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
 
 <Badge type="danger" text="Warning" vertical="middle"/> As a result of calling this endpoint

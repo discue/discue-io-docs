@@ -20,7 +20,7 @@ api:
 <span class="font-medium">POST</span> /queues
 </p>
 
-Creates a new queue associated with the current organization.
+**Creates** a new queue associated.
 
 This endpoint returns the queue's unique identifier, the `queue_id`. This identifier
 can be used for subsequent requests to 

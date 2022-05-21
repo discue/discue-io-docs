@@ -20,7 +20,7 @@ api:
 <span class="font-medium">GET</span> /messages
 </p>
 
-Returns the list of all messages associated with the current organization. Use this method
+**Returns** the list of all messages. Use this method 
 to get an overview of all messages created via the
 [add a message to a queue endpoint](/api-reference/queue-messages/add-a-message-to-a-queue.html).
 

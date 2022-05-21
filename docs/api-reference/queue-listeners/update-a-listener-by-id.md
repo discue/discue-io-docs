@@ -20,10 +20,14 @@ api:
 <span class="font-medium">PUT</span> /queues/{queue_id}/listeners/{listener_id}
 </p>
 
-Updates a listener by id. To identify the target listener, a `queue_id` and a `listener_id` must be passed as a path parameter. 
+**Updates** a queue listener by id. Requires a valid `queue_id` and `listener_id` as path parameters.
 If no queue or listener with the given ids can be found, the endpoint returns status `404`.
 
-Only **mutable** properties like `name`, `notify_url`, `liveness_url` can be updated. 
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). The `listener_id` is the one 
+returned by the [create listener endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html).
+
+Only **mutable** properties like `name`, `notify_url`, `liveness_url` can be updated.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 

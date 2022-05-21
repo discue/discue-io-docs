@@ -20,8 +20,9 @@ api:
 <span class="font-medium">GET</span> /listeners
 </p>
 
-Returns the list of all listeners associated with the current organization. Use this method
-to get an overview of all listeners created via the
+**Returns** the list of all listeners. 
+
+Use this method to get an overview of all listeners created via the
 [add a listener to a queue endpoint](/api-reference/queue-listeners/add-a-listener-to-a-queue.html).
 
 As this endpoint is not bound to a specific queue, it will return **all listeners**

@@ -20,9 +20,12 @@ api:
 <span class="font-medium">GET</span> /queues/{queue_id}/messages
 </p>
 
-Returns all messages of a queue by id. Callees must pass a `queue_id` that was returned
-during [creation](/api-reference/queue-messages/add-a-message-to-a-queue.html) of the target
-queue.
+**Returns** all messages of a queue by id.  **Requires** the target 
+`queue_id` as a path parameter.
+
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). 
+If no queue with the given `queue_id` can be found, the endpoint returns status `404`.
 
 This endpoint can potentially return a large number of messages. This can lead to higher than average response times. 
 

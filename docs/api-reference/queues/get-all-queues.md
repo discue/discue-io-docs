@@ -20,7 +20,7 @@ api:
 <span class="font-medium">GET</span> /queues
 </p>
 
-Returns all queues associated with the current organization. That is queues that were created 
+**Returns** all queues. That is queues that were created 
 by calling the [create queue endpoint](/api-reference/queues/create-a-queue.html).
 
 The result may be inconistent as in not update-to-date as results may be cached
