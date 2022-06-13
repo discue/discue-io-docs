@@ -13,7 +13,8 @@ module.exports = {
     description: 'Developer documentation for the secure and reliable messaging and queueing service.',
     theme: defaultTheme(
         {
-            darkMode: false,
+            colorMode: 'light',
+            colorModeSwitch: false,
             logo: '/logo.svg',
             logoDark: '/icons-fire-all-gray/web/icon-96.png',
             editLinkText: 'Improve this page',
