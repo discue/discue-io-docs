@@ -114,7 +114,6 @@ func main() {
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
-|_embed|query|boolean| ❌ |Embed full resources in response payload|
 
 ## Responses 
 
@@ -126,22 +125,14 @@ func main() {
   "api_keys": [
     {
       "id": "string",
-      "name": "string"
+      "name": "string",
+      "created_at": 1644616838173,
+      "updated_at": 1644616838173,
+      "last_used_at": 1644616838173,
+      "key": "ep1",
+      "status": "disabled"
     }
   ],
-  "_embedded": {
-    "api_keys": [
-      {
-        "id": "string",
-        "name": "string",
-        "created_at": 1644616838173,
-        "updated_at": 1644616838173,
-        "last_used_at": 1644616838173,
-        "key": "ep1",
-        "status": "disabled"
-      }
-    ]
-  },
   "_links": {
     "self": {
       "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/messages/8476f9ea-e457-4fed-8fbd-347a96237a96"

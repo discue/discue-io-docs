@@ -115,7 +115,6 @@ func main() {
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |queue_id|path|string(uuid)|✔|Id of the target queue|
-|_embed|query|boolean| ❌ |Embed full resources in response payload|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 
@@ -131,14 +130,6 @@ func main() {
       "name": "string"
     }
   ],
-  "_embedded": {
-    "messages": [
-      {
-        "id": "string",
-        "name": "string"
-      }
-    ]
-  },
   "_links": {
     "self": {
       "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/messages"

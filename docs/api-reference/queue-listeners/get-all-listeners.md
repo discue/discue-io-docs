@@ -115,7 +115,6 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|_embed|query|boolean| ❌ |Embed full resources in response payload|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 
@@ -127,38 +126,30 @@ func main() {
 {
   "listeners": [
     {
-      "id": "0644659f-b47b-4668-86dd-a496cb7fbc76",
-      "name": "myapp.io/delete-user-listener-64fae19"
+      "id": "string",
+      "name": "string",
+      "liveness": {
+        "state": "stable",
+        "success_count": 1,
+        "last_success_at": 1644262937466,
+        "failure_count": 1,
+        "last_failure_status": 500,
+        "last_failure_at": 1644262937466,
+        "last_failure_msg": 1644262937466
+      },
+      "messages": {
+        "acknowledged_count": 312,
+        "last_success_at": 1644616838173,
+        "last_failure_at": 1644616818173,
+        "missed": [
+          "fb445832-50f7-4471-a0a9-d0def6d5951f"
+        ],
+        "missed_count": 1
+      },
+      "notify_url": "https://myapp.io/deletion/listener",
+      "liveness_url": "https://myapp.io/live"
     }
   ],
-  "_embedded": {
-    "listeners": [
-      {
-        "id": "string",
-        "name": "string",
-        "liveness": {
-          "state": "stable",
-          "success_count": 1,
-          "last_success_at": 1644262937466,
-          "failure_count": 1,
-          "last_failure_status": 500,
-          "last_failure_at": 1644262937466,
-          "last_failure_msg": 1644262937466
-        },
-        "messages": {
-          "acknowledged_count": 312,
-          "last_success_at": 1644616838173,
-          "last_failure_at": 1644616818173,
-          "missed": [
-            "fb445832-50f7-4471-a0a9-d0def6d5951f"
-          ],
-          "missed_count": 1
-        },
-        "notify_url": "https://myapp.io/deletion/listener",
-        "liveness_url": "https://myapp.io/live"
-      }
-    ]
-  },
   "_links": {
     "self": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/listeners",
     "myapp.io/delete-user-listener-64fae19": {
@@ -320,7 +311,7 @@ func main() {
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetQueueListenersResponseWithEmbeddings](#getqueuelistenersresponsewithembeddings)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetQueueListenersResponse](#getqueuelistenersresponse)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|Inline|
 |402|[Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2)|Payment Required|Inline|
