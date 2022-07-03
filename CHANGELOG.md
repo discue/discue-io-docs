@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/discue/api-docs/compare/v0.3.0...v0.4.0) (2022-07-03)
+
+
+### Features
+
+* **docs:** update descriptions of all endpoint ([bac372b](https://github.com/discue/api-docs/commit/bac372bfeb971ccd0db928d420bd5ad39ed47532))
+
+
+### Bug Fixes
+
+* **docs:** cursor pointer for collapsible sidebar item ([2563e40](https://github.com/discue/api-docs/commit/2563e40e78f5045062fa53851e552ef127c3fb93))
+* **theme:** disable dark mode ([c3b3a44](https://github.com/discue/api-docs/commit/c3b3a44a09ca7ec2d73f1ac044ec54a44ffd1267))
+
+
+### Chores
+
+* **deps-dev:** bump @discue/ui-components from 0.10.0 to 0.12.0 ([b05dd03](https://github.com/discue/api-docs/commit/b05dd033f6352dff48c7f137a2efcc84f54885ba))
+* **deps-dev:** bump @discue/ui-components from 0.8.0 to 0.10.0 ([c9a023e](https://github.com/discue/api-docs/commit/c9a023eca258fe6990bdbf4e5b19a8a4bf03c884))
+* **deps-dev:** bump firebase-tools from 10.9.2 to 11.0.0 ([c793976](https://github.com/discue/api-docs/commit/c793976252203b50cea8dde7feb30a40df3f62cc))
+* **deps-dev:** bump firebase-tools from 11.0.0 to 11.0.1 ([cf39508](https://github.com/discue/api-docs/commit/cf395081ed356400fe936cdf1f579624e1d7756e))
+* **deps-dev:** bump firebase-tools from 11.0.1 to 11.1.0 ([5fc3658](https://github.com/discue/api-docs/commit/5fc3658f359fbc6c0aee8705a0f7f73fb514b471))
+* **deps-dev:** bump nodemon from 2.0.16 to 2.0.18 ([3b2bd78](https://github.com/discue/api-docs/commit/3b2bd78d9e8a15d21a07e92059dca5e1e392a196))
+* **deps-dev:** bump postcss from 8.4.13 to 8.4.14 ([537c017](https://github.com/discue/api-docs/commit/537c017e35a434547e2bb2d5ca4699735ce2da3e))
+* **deps-dev:** bump tailwindcss from 3.1.2 to 3.1.3 ([c004fd5](https://github.com/discue/api-docs/commit/c004fd5138d16d925e5a0cc0498afd6f24ef3737))
+* **deps-dev:** bump tailwindcss from 3.1.3 to 3.1.4 ([13abc56](https://github.com/discue/api-docs/commit/13abc56e6b743144be684be53f945f400e318794))
+* **deps-dev:** bump vuepress from 2.0.0-beta.45 to 2.0.0-beta.46 ([3390024](https://github.com/discue/api-docs/commit/339002446914392681faa351ab6acaec9a646c94))
+* **deps-dev:** bump yaml from 2.1.0 to 2.1.1 ([08b251e](https://github.com/discue/api-docs/commit/08b251e946c74ea634a134c28a51ada8d4ba4b2a))
+* **deps:** update dependencies ([80cb56a](https://github.com/discue/api-docs/commit/80cb56a54917e349651b7356f189db95908c2bb2))
+* **deps:** update package-lock ([ab25623](https://github.com/discue/api-docs/commit/ab25623fd730bd325ac69d74a04ddeb550df2d48))
+* **deps:** update vuepress plugin shiki ([13cae74](https://github.com/discue/api-docs/commit/13cae74f6a2431016e363463fdd371772d1a6452))
+* **docs:** add descriptions for all public endpoints ([070f42d](https://github.com/discue/api-docs/commit/070f42d326cadff092b0ecc665278477779dd1e0))
+* **docs:** add get message stats endpoint ([31e6af5](https://github.com/discue/api-docs/commit/31e6af58a69a18d560d8d8a075d50faaa1a8164a))
+* **docs:** remove bundler from config ([9ce302e](https://github.com/discue/api-docs/commit/9ce302ee6491de50674cb4c20699b9fa4bdc0599))
+* **docs:** remove summary from all endpoint docs ([c11e7c3](https://github.com/discue/api-docs/commit/c11e7c3d1a97500d100d29174a60811af7c90bcc))
+* **docs:** update authentication tip ([5f96ed7](https://github.com/discue/api-docs/commit/5f96ed7c3a4d8660bc123809117f9af49a1e1a07))
+* **docs:** update docs according to api spec ([bc43929](https://github.com/discue/api-docs/commit/bc439290cf27c7f64574fbe9c38059f595be6dde))
+
 ## [0.3.0](https://github.com/discue/api-docs/compare/v0.2.0...v0.3.0) (2022-05-19)
 
 
