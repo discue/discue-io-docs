@@ -9,6 +9,7 @@
 
 .navbar-items-wrapper {
     @apply mt-1;
+    max-width: none !important;
 }
 
 .navbar-items {
