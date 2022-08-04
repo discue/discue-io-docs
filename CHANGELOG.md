@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/discue/api-docs/compare/v0.4.0...v0.5.0) (2022-08-04)
+
+
+### Features
+
+* update from latest api spec ([2255cee](https://github.com/discue/api-docs/commit/2255ceeaed3663a0b4d294c0835bbe5d60d2746d))
+
+
+### Bug Fixes
+
+* navbar hidden on firefox ([ec3c012](https://github.com/discue/api-docs/commit/ec3c0120d46704d5bd960faf9cc4097b29440088))
+
+
+### Chores
+
+* **deps-dev:** bump @discue/ui-components from 0.12.0 to 0.14.0 ([67964fd](https://github.com/discue/api-docs/commit/67964fde9fcccbed27c5cfee2ab51e6ad97d84eb))
+* **deps-dev:** bump @discue/ui-components from 0.14.0 to 0.16.0 ([6770c30](https://github.com/discue/api-docs/commit/6770c30c1a2fe2587c456894efe4e353f9e636a4))
+* **deps-dev:** bump @discue/ui-components from 0.16.0 to 0.17.0 ([55913dd](https://github.com/discue/api-docs/commit/55913dd37511268f58485fcc5fa5e0e0038a32ed))
+* **deps-dev:** bump firebase-tools from 11.1.0 to 11.2.0 ([f60690d](https://github.com/discue/api-docs/commit/f60690d7eea97e99bdbe41b87ad66ddb9ed170cc))
+* **deps-dev:** bump firebase-tools from 11.2.0 to 11.2.1 ([71b68ed](https://github.com/discue/api-docs/commit/71b68ed6bb5163897b847b624ef236f2c152aab4))
+* **deps-dev:** bump firebase-tools from 11.2.1 to 11.2.2 ([7d0b9f3](https://github.com/discue/api-docs/commit/7d0b9f39d0f744601d0aa59f524a62766b843e6a))
+* **deps-dev:** bump firebase-tools from 11.2.2 to 11.3.0 ([e1018f0](https://github.com/discue/api-docs/commit/e1018f0dfa0decb9c8a9ab7bfe78541396d6f5a1))
+* **deps-dev:** bump firebase-tools from 11.3.0 to 11.4.0 ([93ed236](https://github.com/discue/api-docs/commit/93ed236d31edaf0d0d6773a99a26925bd14308c2))
+* **deps-dev:** bump nodemon from 2.0.18 to 2.0.19 ([643185b](https://github.com/discue/api-docs/commit/643185b78bef04ca21807305d983ebfdceae1462))
+* **deps-dev:** bump postcss-cli from 9.1.0 to 10.0.0 ([96e99b2](https://github.com/discue/api-docs/commit/96e99b2a14ed14be9b584d3cef5bb49cb7e57920))
+* **deps-dev:** bump tailwindcss from 3.1.4 to 3.1.5 ([a09a096](https://github.com/discue/api-docs/commit/a09a0966b3a1eef4e20f0fd754409e86c9abbf29))
+* **deps-dev:** bump tailwindcss from 3.1.5 to 3.1.6 ([5da84eb](https://github.com/discue/api-docs/commit/5da84eba826676b03315c6f9b4074513a9558884))
+* **deps-dev:** bump tailwindcss from 3.1.6 to 3.1.7 ([626b39a](https://github.com/discue/api-docs/commit/626b39a5c2a1770f621c3e42ba959d21ddc86c08))
+* **deps:** update deps ([dcdd6c0](https://github.com/discue/api-docs/commit/dcdd6c06c4c45cba7b6d667a1c7df7c5d29aaac0))
+* **deps:** update vuepress ([28d9acf](https://github.com/discue/api-docs/commit/28d9acfdfe375af9ea878cd42dee1a0e9b6c06cc))
+
 ## [0.4.0](https://github.com/discue/api-docs/compare/v0.3.0...v0.4.0) (2022-07-03)
 
 
