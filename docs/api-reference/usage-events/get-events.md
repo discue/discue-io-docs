@@ -8,35 +8,26 @@ language_tabs:
 toc_footers: []
 includes: []
 api:
-  method: post
-  path: /queues
-  name: Create a queue
+  method: get
+  path: /events
+  name: Get events
 
 ---
 
-# Create a queue
+# Get events
 
 <p class="text-lg">
-<span class="font-medium">POST</span> /queues
+<span class="font-medium">GET</span> /events
 </p>
 
-**Creates** a new queue associated.
+**Returns** api usage events which give insights on what endpoints were called and, therefore,
+which actions were performed. API usage events include and are not limited to
+- creation, deletion and management of queues
+- creation, deletion and management of listeners
+- creation, deletion and management of api keys
+- creation and broadcasting/publising of messages
 
-This endpoint returns the queue's unique identifier, the `queue_id`. This identifier
-can be used for subsequent requests to 
-- [update a queue](/api-reference/queues/update-a-queue-by-id.html), or to 
-- [delete a queue](/api-reference/queues/delete-a-queue-by-id.html).
-
-Additionally, the `queue_id` is necessary to create and update `Listeners` and `Messages`.Thus, the 
-creation of a queue is a prerequisite for the following endpoints: 
-- [Get a listener by id](/api-reference/queue-listeners/get-a-listener-by-id.html)
-- [Add a listener to a queue](/api-reference/queue-listeners/add-a-listener-to-a-queue.html)
-- [Update  a listener by id](/api-reference/queue-listeners/update-a-listener-by-id.html)
-- [Delete a listener by id](/api-reference/queue-listeners/delete-a-listener-by-id.html)
-- [Get a message by id](/api-reference/queue-messages/get-a-message-by-id.html)
-- [Get all messages of a queue](/api-reference/queue-messages/get-messages-by-queue-id.html)
-- [Add a message to a queue](/api-reference/queue-messages/add-a-message-to-a-queue.html)
-- [Delete a message by id](/api-reference/queue-messages/delete-a-message-by-id.html)
+Returned data is always limited to the past 24 hours.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 
@@ -51,13 +42,9 @@ See also: [Authentication](/getting-started/#prerequisites).
 <CodeGroup><CodeGroupItem title="shell">
 
 ```shell
-curl -X POST http://api.discue.io/v1/queues \
-  -H 'Content-Type: application/json' \
+curl -X GET http://api.discue.io/v1/events \
   -H 'Accept: application/json' \
-  -H 'X-API-KEY: API_KEY' \
-  -d '{
-  "name": "myapp.io/deletion-request-queue"
-}' 
+  -H 'X-API-KEY: API_KEY'
 ```
 
 </CodeGroupItem>
@@ -65,18 +52,13 @@ curl -X POST http://api.discue.io/v1/queues \
 <CodeGroupItem title="javascript">
 
 ```javascript
-const body = {
-  "name": "myapp.io/deletion-request-queue"
-}
-
 const headers = {
-  'Content-Type':'application/json',
   'Accept':'application/json',
   'X-API-KEY':'API_KEY'
 }
 
-const response = await fetch('http://api.discue.io/v1/queues', {
-  method: 'POST',  body,  headers
+const response = await fetch('http://api.discue.io/v1/events', {
+  method: 'GET',  headers
 })
 
 const body = await response.json()
@@ -89,12 +71,11 @@ const body = await response.json()
 ```python
 import requests
 headers = {
-  'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-API-KEY': 'API_KEY'
 }
 
-r = requests.post('http://api.discue.io/v1/queues', headers = headers)
+r = requests.get('http://api.discue.io/v1/events', headers = headers)
 ```
 
 </CodeGroupItem>
@@ -112,13 +93,12 @@ import (
 func main() {
 
   headers := map[string][]string{
-      "Content-Type": []string{"application/json"},
       "Accept": []string{"application/json"},
       "X-API-KEY": []string{"API_KEY"},
   }
 
   data := bytes.NewBuffer([]byte{jsonReq})
-  req, err := http.NewRequest("POST", "http://api.discue.io/v1/queues", data)
+  req, err := http.NewRequest("GET", "http://api.discue.io/v1/events", data)
   req.Header = headers
 
   client := &http.Client{}
@@ -130,20 +110,24 @@ func main() {
 
 </CodeGroup>
 
-## Body
-
-```json
-{
-  "name": "myapp.io/deletion-request-queue"
-}
-```
-
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
-|body|body|[UpdateQueueRequest](#schemaupdatequeuerequest)|✔|none|
-|» name|body|string| ❌ |none|
+|events|query|string| ❌ |Limit the returned array to a certain number of elements|
+|limit|query|number| ❌ |Limit the returned array to a certain number of elements|
+|startAfter|query|number(int64)| ❌ |Return only elements that were stored after the given timestamp. Must be used in conjunction with startAfterId to have an effect|
+|startAfterId|query|[ResourceId](#schemaresourceid)| ❌ |Must be used in conjunction with startAfterId to have an effect|
+
+## Enumerated Values
+
+|Parameter|Value|
+|---|---|
+|events|all|
+|events|api_keys|
+|events|listeners|
+|events|messages|
+|events|queues|
 
 ## Responses 
 
@@ -152,16 +136,35 @@ func main() {
 
 ```json
 {
-  "queue": {
-    "id": "string",
-    "name": "string"
-  },
+  "events": [
+    {
+      "id": "string",
+      "type": "api_key_added",
+      "stored_at": 1657027948150,
+      "client": {
+        "id": "string"
+      },
+      "message": {
+        "id": "string",
+        "name": "string"
+      },
+      "api_key": {
+        "id": "string",
+        "name": "string"
+      },
+      "queue": {
+        "id": "string",
+        "name": "string"
+      },
+      "listener": {
+        "id": "string",
+        "name": "string"
+      }
+    }
+  ],
   "_links": {
     "self": {
-      "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386"
-    },
-    "myapp.io/delete-user-listener-64fae19": {
-      "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/listeners/0644659f-b47b-4668-86dd-a496cb7fbc76"
+      "href": "https://api.discue.io/events"
     }
   }
 }
@@ -319,7 +322,7 @@ func main() {
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetQueueResponse](#getqueueresponse)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetEventsResponse](#geteventsresponse)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|Inline|
 |402|[Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2)|Payment Required|Inline|

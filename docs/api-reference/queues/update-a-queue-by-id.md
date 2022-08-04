@@ -145,13 +145,7 @@ func main() {
 {
   "queue": {
     "id": "string",
-    "name": "string",
-    "listeners": [
-      {
-        "id": "string",
-        "name": "string"
-      }
-    ]
+    "name": "string"
   },
   "_links": {
     "self": {
