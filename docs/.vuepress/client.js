@@ -1,5 +1,5 @@
-import * as components from '@discue/ui-components/ssr'
-import * as internalComponents from '@discue/ui-components/ssr/internal'
+import * as components from '@discue/ui-components'
+import * as internalComponents from '@discue/ui-components/internal'
 import { defineClientConfig } from '@vuepress/client'
 
 export default defineClientConfig({
