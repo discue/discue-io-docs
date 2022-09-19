@@ -16,7 +16,7 @@
   "author": "Stefan Pfaffel",
   "license": "MIT",
   "devDependencies": {
-    "@discue/ui-components": "^0.18.0",
+    "@discue/ui-components": "^0.20.0",
     "@vuepress/plugin-shiki": "^2.0.0-beta.49",
     "firebase-tools": "^11.8.1",
     "markdown-it-anchor": "^8.6.4",
