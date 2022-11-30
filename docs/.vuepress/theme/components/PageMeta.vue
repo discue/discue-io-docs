@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import AutoLink from '@theme/AutoLink.vue'
-import {
-  usePageData,
-  usePageFrontmatter,
-  useSiteLocaleData,
-} from '@vuepress/client'
-import { computed } from 'vue'
-import type { ComputedRef } from 'vue'
+import { usePageData, usePageFrontmatter } from '@vuepress/client'
+import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables/index.js'
+import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils/index.js'
 import type {
-  DefaultThemeNormalPageFrontmatter,
-  DefaultThemePageData,
-  NavLink,
-} from '@vuepress/theme-default/lib/shared'
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
-import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils'
+DefaultThemeNormalPageFrontmatter,
+DefaultThemePageData,
+NavLink
+} from '@vuepress/theme-default/lib/shared/index.js'
+import type { ComputedRef } from 'vue'
+import { computed } from 'vue'
 
 const useEditNavLink = (): ComputedRef<null | NavLink> => {
   const themeLocale = useThemeLocaleData()
@@ -98,7 +94,7 @@ const contributors = useContributors()
 </script>
 
 <template>
-  <div class="page-meta text-right">
+  <div class="page-meta">
     <div v-if="editNavLink" class="meta-item edit-link">
       <AutoLink class="meta-item-label" :item="editNavLink" />
     </div>
@@ -110,10 +106,7 @@ const contributors = useContributors()
       </ClientOnly>
     </div>
 
-    <div
-      v-if="contributors && contributors.length"
-      class="meta-item contributors"
-    >
+    <div v-if="contributors && contributors.length" class="meta-item contributors">
       <span class="meta-item-label">{{ themeLocale.contributorsText }}: </span>
       <span class="meta-item-info">
         <template v-for="(contributor, index) in contributors" :key="index">

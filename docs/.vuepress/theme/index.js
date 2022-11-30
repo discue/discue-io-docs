@@ -1,8 +1,9 @@
-const { path } = require('@vuepress/utils')
-const { defaultTheme } = require('@vuepress/theme-default')
+import { defaultTheme } from '@vuepress/theme-default';
+import { path } from '@vuepress/utils';
 
-module.exports = options => {
-    return {
+export default options => {
+
+    return Object.assign({}, defaultTheme(options), {
         name: 'vuepress-theme-local',
         extends: defaultTheme(options),
         layouts: {
@@ -13,5 +14,5 @@ module.exports = options => {
             '@theme/HomeFooter.vue': path.resolve(__dirname, './layouts/HomeFooter.vue'),
             '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue')
         }
-    }
+    })
 }

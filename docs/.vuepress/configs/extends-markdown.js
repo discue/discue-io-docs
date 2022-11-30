@@ -1,4 +1,5 @@
-const anchorPlugin = require('markdown-it-anchor')
+import anchorPlugin from 'markdown-it-anchor'
+import markdownItArrs from 'markdown-it-attrs'
 
 // eslint-disable-next-line no-control-regex
 const rControl = /[\u0000-\u001f]/g
@@ -24,8 +25,8 @@ const slugify = (str) => {
         .toLowerCase()
 }
 
-module.exports = (md) => {
-    md.use(require('markdown-it-attrs'), {
+export default (md) => {
+    md.use(markdownItArrs, {
         allowedAttributes: ['id'],
         leftDelimiter: '[',
         rightDelimiter: ']',

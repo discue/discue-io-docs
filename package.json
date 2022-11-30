@@ -4,6 +4,7 @@
   "description": "Documentation module of discue.io: A secure and reliable messaging and queueing service.",
   "main": "index.js",
   "private": true,
+  "type": "module",
   "scripts": {
     "docs:serve": "nodemon --ext md,vue,js,scss --ignore docs/.vuepress/.cache --ignore docs/.vuepress/.temp --watch docs/ --watch styles --exec npm run docs:dev",
     "docs:dev": "npm run docs:styles && npx vuepress dev docs",
@@ -17,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@discue/ui-components": "^0.23.0",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.49",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.53",
     "firebase-tools": "^11.16.1",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-attrs": "^4.1.4",
@@ -29,8 +30,8 @@
     "snake-case": "^3.0.4",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.2.4",
-    "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-sitemap2": "^2.0.0-beta.24",
+    "vuepress": "^2.0.0-beta.53",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.99",
     "yaml": "^2.1.3"
   }
 }

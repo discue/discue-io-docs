@@ -1,6 +1,8 @@
-const { version } = require('../../../package.json')
+import fs from 'node:fs'
 
-module.exports = [{
+const { version } = JSON.parse(fs.readFileSync('package.json'))
+
+export default [{
     text: 'Getting Started',
     link: '/getting-started/',
 }, {

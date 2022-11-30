@@ -1,11 +1,10 @@
-const fs = require("fs")
-const { join } = require("path")
-
-const { pascalCase } = require('pascal-case');
-const yaml = require('yaml')
+import fs from "node:fs"
+import { join } from "node:path"
+import { pascalCase } from 'pascal-case'
+import yaml from 'yaml'
 
 const getAllFiles = function (dirPath, arrayOfFiles) {
-    files = fs.readdirSync(dirPath)
+    const files = fs.readdirSync(dirPath)
     arrayOfFiles = arrayOfFiles || []
 
     files.forEach(function (file) {
@@ -78,7 +77,7 @@ const filesAndFolders = getAllFolders(join('docs', 'api-reference')).reduce((con
     return context
 }, [])
 
-module.exports = [{
+export default [{
     text: 'Introduction',
     link: '/introduction/',
 }, {

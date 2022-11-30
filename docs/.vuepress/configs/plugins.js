@@ -1,8 +1,8 @@
-const { shikiPlugin } = require('@vuepress/plugin-shiki')
-const { sitemapPlugin } = require('vuepress-plugin-sitemap2')
-const { 'default': prismPlugin } = require('@vuepress/plugin-prismjs')
+import prismPlugin from '@vuepress/plugin-prismjs'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
 
-module.exports = [
+export default [
     prismPlugin(false),
     sitemapPlugin({
         hostname: 'https://docs.discue.io',

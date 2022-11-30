@@ -1,13 +1,12 @@
-const defaultTheme = require('./theme')
+import extendsMarkdown from './configs/extends-markdown'
+import head from './configs/head'
+import markdown from './configs/markdown'
+import navbar from './configs/navbar'
+import plugins from './configs/plugins'
+import sidebar from './configs/sidebar'
+import defaultTheme from './theme'
 
-const head = require('./configs/head')
-const extendsMarkdown = require('./configs/extends-markdown')
-const markdown = require('./configs/markdown')
-const navbar = require('./configs/navbar')
-const sidebar = require('./configs/sidebar')
-const plugins = require('./configs/plugins')
-
-module.exports = {
+export default {
     lang: 'en-US',
     title: 'discue',
     description: 'Developer documentation for the secure and reliable messaging and queueing service.',
