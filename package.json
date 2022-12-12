@@ -19,7 +19,7 @@
   "devDependencies": {
     "@discue/ui-components": "^0.24.0",
     "@vuepress/plugin-shiki": "^2.0.0-beta.53",
-    "firebase-tools": "^11.16.1",
+    "firebase-tools": "^11.17.0",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-attrs": "^4.1.4",
     "nodemon": "^2.0.20",
