@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@discue/ui-components": "^0.24.0",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.53",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.59",
     "firebase-tools": "^11.18.0",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-attrs": "^4.1.6",
