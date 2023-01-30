@@ -46,7 +46,44 @@ curl -X PUT http://api.discue.io/v1/queues/{queue_id} \
   -H 'Accept: application/json' \
   -H 'X-API-KEY: API_KEY' \
   -d '{
-  "name": "myapp.io/deletion-request-queue"
+  "name": "myapp.io/deletion-request-queue",
+  "schema": {
+    "person": {
+      "type": "object",
+      "props": {
+        "name": {
+          "type": "string",
+          "pattern": "abc",
+          "required": true
+        },
+        "street": {
+          "type": "string",
+          "min": 5,
+          "max": 10
+        },
+        "city": {
+          "type": "string",
+          "enum": [
+            "Berlin"
+          ]
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "min": 0,
+      "max": 15,
+      "required": false
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "abc",
+        "required": true
+      }
+    }
+  }
 }' 
 ```
 
@@ -56,7 +93,44 @@ curl -X PUT http://api.discue.io/v1/queues/{queue_id} \
 
 ```javascript
 const body = {
-  "name": "myapp.io/deletion-request-queue"
+  "name": "myapp.io/deletion-request-queue",
+  "schema": {
+    "person": {
+      "type": "object",
+      "props": {
+        "name": {
+          "type": "string",
+          "pattern": "abc",
+          "required": true
+        },
+        "street": {
+          "type": "string",
+          "min": 5,
+          "max": 10
+        },
+        "city": {
+          "type": "string",
+          "enum": [
+            "Berlin"
+          ]
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "min": 0,
+      "max": 15,
+      "required": false
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "abc",
+        "required": true
+      }
+    }
+  }
 }
 
 const headers = {
@@ -124,7 +198,44 @@ func main() {
 
 ```json
 {
-  "name": "myapp.io/deletion-request-queue"
+  "name": "myapp.io/deletion-request-queue",
+  "schema": {
+    "person": {
+      "type": "object",
+      "props": {
+        "name": {
+          "type": "string",
+          "pattern": "abc",
+          "required": true
+        },
+        "street": {
+          "type": "string",
+          "min": 5,
+          "max": 10
+        },
+        "city": {
+          "type": "string",
+          "enum": [
+            "Berlin"
+          ]
+        }
+      }
+    },
+    "count": {
+      "type": "number",
+      "min": 0,
+      "max": 15,
+      "required": false
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "abc",
+        "required": true
+      }
+    }
+  }
 }
 ```
 
@@ -135,6 +246,7 @@ func main() {
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[UpdateQueueRequest](#schemaupdatequeuerequest)|✔|none|
 |» name|body|string| ❌ |none|
+|» schema|body|[QueueMessageSchema](#queuemessageschema)| ❌ |none|
 
 ## Responses 
 
@@ -145,7 +257,44 @@ func main() {
 {
   "queue": {
     "id": "string",
-    "name": "string"
+    "name": "string",
+    "schema": {
+      "person": {
+        "type": "object",
+        "props": {
+          "name": {
+            "type": "string",
+            "pattern": "abc",
+            "required": true
+          },
+          "street": {
+            "type": "string",
+            "min": 5,
+            "max": 10
+          },
+          "city": {
+            "type": "string",
+            "enum": [
+              "Berlin"
+            ]
+          }
+        }
+      },
+      "count": {
+        "type": "number",
+        "min": 0,
+        "max": 15,
+        "required": false
+      },
+      "list": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "abc",
+          "required": true
+        }
+      }
+    }
   },
   "_links": {
     "self": {

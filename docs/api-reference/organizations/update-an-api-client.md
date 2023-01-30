@@ -8,22 +8,19 @@ language_tabs:
 toc_footers: []
 includes: []
 api:
-  method: post
-  path: /api_clients
-  name: Create an api client
+  method: put
+  path: /api_clients/{api_client_id}
+  name: Update an api client
 
 ---
 
-# Create an api client
+# Update an api client
 
 <p class="text-lg">
-<span class="font-medium">POST</span> /api_clients
+<span class="font-medium">PUT</span> /api_clients/{api_client_id}
 </p>
 
-**Creates a new api client**. 
-
-**An api client groups resources like queues, listeners and messages**.
-Users who need direct acces to the resources can be assigned to an organizations, too. 
+**Update an api client**. 
 
 <Badge type="get" text="Info" vertical="middle"/> In this context an api client and an organization can be used synonymously.
 
@@ -40,7 +37,7 @@ See also: [Authentication](/getting-started/#prerequisites).
 <CodeGroup><CodeGroupItem title="shell">
 
 ```shell
-curl -X POST http://api.discue.io/v1/api_clients \
+curl -X PUT http://api.discue.io/v1/api_clients/{api_client_id} \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -H 'X-API-KEY: API_KEY' \
@@ -66,8 +63,8 @@ const headers = {
   'X-API-KEY':'API_KEY'
 }
 
-const response = await fetch('http://api.discue.io/v1/api_clients', {
-  method: 'POST',  body,  headers
+const response = await fetch('http://api.discue.io/v1/api_clients/{api_client_id}', {
+  method: 'PUT',  body,  headers
 })
 
 const body = await response.json()
@@ -85,7 +82,7 @@ headers = {
   'X-API-KEY': 'API_KEY'
 }
 
-r = requests.post('http://api.discue.io/v1/api_clients', headers = headers)
+r = requests.put('http://api.discue.io/v1/api_clients/{api_client_id}', headers = headers)
 ```
 
 </CodeGroupItem>
@@ -109,7 +106,7 @@ func main() {
   }
 
   data := bytes.NewBuffer([]byte{jsonReq})
-  req, err := http.NewRequest("POST", "http://api.discue.io/v1/api_clients", data)
+  req, err := http.NewRequest("PUT", "http://api.discue.io/v1/api_clients/{api_client_id}", data)
   req.Header = headers
 
   client := &http.Client{}
@@ -133,6 +130,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
+|api_client_id|path|string(uuid)|✔|none|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[ApiClient](#schemaapiclient)| ❌ |none|
 |» name|body|string| ❌ |none|

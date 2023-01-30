@@ -55,6 +55,7 @@ curl -X POST http://api.discue.io/v1/queues/{queue_id}/messages \
   -H 'Accept: application/json' \
   -H 'X-API-KEY: API_KEY' \
   -d '{
+  "name": "string",
   "data": "{ \"userId\": \"481512342\" }"
 }' 
 ```
@@ -65,6 +66,7 @@ curl -X POST http://api.discue.io/v1/queues/{queue_id}/messages \
 
 ```javascript
 const body = {
+  "name": "string",
   "data": "{ \"userId\": \"481512342\" }"
 }
 
@@ -133,6 +135,7 @@ func main() {
 
 ```json
 {
+  "name": "string",
   "data": "{ \"userId\": \"481512342\" }"
 }
 ```
@@ -143,6 +146,7 @@ func main() {
 |queue_id|path|string(uuid)|✔|Id of the target queue|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[CreateMessageRequest](#schemacreatemessagerequest)| ❌ |none|
+|» name|body|[ResourceName](#resourcename)| ❌ |none|
 |» data|body|[MessageData](#messagedata)|✔|none|
 
 ## Responses 

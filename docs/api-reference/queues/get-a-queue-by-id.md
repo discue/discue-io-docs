@@ -125,7 +125,44 @@ func main() {
 {
   "queue": {
     "id": "string",
-    "name": "string"
+    "name": "string",
+    "schema": {
+      "person": {
+        "type": "object",
+        "props": {
+          "name": {
+            "type": "string",
+            "pattern": "abc",
+            "required": true
+          },
+          "street": {
+            "type": "string",
+            "min": 5,
+            "max": 10
+          },
+          "city": {
+            "type": "string",
+            "enum": [
+              "Berlin"
+            ]
+          }
+        }
+      },
+      "count": {
+        "type": "number",
+        "min": 0,
+        "max": 15,
+        "required": false
+      },
+      "list": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "abc",
+          "required": true
+        }
+      }
+    }
   },
   "_links": {
     "self": {

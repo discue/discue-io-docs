@@ -116,16 +116,50 @@ func main() {
 
 ```json
 {
-  "message_events": [
-    {
-      "id": "string",
-      "aggregation_type": "last_1_hour",
-      "client_id": "d0925250-53db-4747-8b4a-5c4e33d7ff9d",
-      "stored_at": 0,
-      "sum": 0,
-      "type": "message_added"
+  "aggregated_api_usage_events": {
+    "last_24_hours": {
+      "api_key_added": 0,
+      "api_key_updated": 0,
+      "api_key_deleted": 0,
+      "queue_added": 0,
+      "queue_updated": 0,
+      "queue_deleted": 0,
+      "listener_added": 0,
+      "listener_updated": 0,
+      "listener_deleted": 0,
+      "message_added": 0,
+      "message_published_ok": 0,
+      "message_published_not_ok": 0
+    },
+    "last_1_hours": {
+      "api_key_added": 0,
+      "api_key_updated": 0,
+      "api_key_deleted": 0,
+      "queue_added": 0,
+      "queue_updated": 0,
+      "queue_deleted": 0,
+      "listener_added": 0,
+      "listener_updated": 0,
+      "listener_deleted": 0,
+      "message_added": 0,
+      "message_published_ok": 0,
+      "message_published_not_ok": 0
+    },
+    "today_so_far": {
+      "api_key_added": 0,
+      "api_key_updated": 0,
+      "api_key_deleted": 0,
+      "queue_added": 0,
+      "queue_updated": 0,
+      "queue_deleted": 0,
+      "listener_added": 0,
+      "listener_updated": 0,
+      "listener_deleted": 0,
+      "message_added": 0,
+      "message_published_ok": 0,
+      "message_published_not_ok": 0
     }
-  ],
+  },
   "_links": {
     "self": {
       "href": "https://api.discue.io/messages/stats"
