@@ -9,6 +9,167 @@ Organizations group a set of resources and access to these resources. You can cr
 
 Each organization's name must be unique and follow the [Reverse domain name](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) notation.
 
+## Schema validation
+Schema validation allows you to define the structure and data types of your queue's messages. That way, we can validate all incoming messages beforehand and discard
+messages that do not adhere to the schema.
+
+The following data types are supported:
+- `object`
+- `array`
+- `string`
+- `number`
+
+Each data type has a distinct set of directives to further limit the set of allowed values. 
+### Object validation
+Objects group other data types logically. Objects need to define at least one property inside `props`. `object`, `array`, `string`, `number` are allowed as properties.
+
+#### Mandatory directives
+- `type` Declares a data type and triggers type-specific validation.
+  - value: **object**.
+- `props` **A map** defining each property of the target object and allowed values. 
+
+#### Optional directives
+- `required` **true**, if this object needs to be set. If it is missing, the validation will fail. 
+  - default: **true**.
+- `strict` **true**, if additional undeclared properties should cause the validation to fail. 
+  - default: **true**.
+
+<CodeGroup>
+<CodeGroupItem title="json">
+
+```javascript
+{
+  person: {
+    type: 'object',
+    props: {
+      first_name: {
+        type: 'string'
+      }
+    }
+  },
+  address: {
+    type: 'object',
+    props: {
+      street: {
+        type: 'string'
+      }
+    }
+  }
+}
+```
+</CodeGroupItem>
+</CodeGroup>
+
+
+### Array validation
+#### Mandatory directives
+- `type` Declares a data type and triggers type-specific validation.
+  - value: **array**.
+- `items` Defines the type of the `elements` of the target array.
+
+#### Optional directives
+- `required` **true**, if this array needs to be set. If it is missing, the validation will fail. 
+  - default: **true**.
+
+<CodeGroup>
+<CodeGroupItem title="json">
+
+```javascript
+{
+  names: {
+    type: 'array',
+    items: {
+      type: 'object'
+      props: {
+        id: {
+          type: 'string'
+        },
+        name: {
+          type: 'string'
+        }
+      }
+    }
+  }
+}
+```
+</CodeGroupItem>
+</CodeGroup>
+
+### String validation
+#### Mandatory directives
+- `type` Declares a data type and triggers type-specific validation.
+  - value: **string**.
+
+#### Optional directives
+- `pattern` **Regular expression** to test the value against. 
+  - default: **null**.
+- `enum` An array of allowed **constant values**. 
+  - default: **null**.
+- `min` **Minimum** amount of characters. 
+  - default: **null**.
+- `max` **Maximum** amoun of characters. 
+  - default: **null**.
+- `required` **true**, if this string needs to be set. If it is missing, the validation will fail. 
+  - default: **true**.
+
+<CodeGroup>
+<CodeGroupItem title="json">
+
+```javascript
+{
+  person: {
+    type: 'object',
+    props: {
+      first_name: {
+        type: 'string'
+        enum: ['Peter', 'Paul']
+      },
+      second_name: {
+        type: 'string',
+        pattern: '/.*/'
+      },
+    }
+  }
+}
+```
+</CodeGroupItem>
+</CodeGroup>
+
+### Number validation
+#### Mandatory directives
+- `type` Declares a data type and triggers type-specific validation.
+  - value: **number**.
+
+#### Optional directives
+- `min` **Minimum** required value of the number. 
+  - default: **null**.
+- `max` **Maximum** allowed value of the number. 
+  - default: **null**.
+- `required` **true**, if this number needs to be set. If it is missing, the validation will fail. 
+  - default: **true**.
+
+Per queue exactly one schema can be defined. 
+
+<CodeGroup>
+<CodeGroupItem title="json">
+
+```javascript
+{
+  address: {
+    type: 'object',
+    props: {
+      house_number: {
+        type: 'number',
+        min: 0,
+        max: 999
+      }
+    }
+  }
+}
+```
+</CodeGroupItem>
+</CodeGroup>
+
 ## Authentication
 To access the API you must provide a valid API token. The API must be provided as the `X-API-KEY` header of **each** request.
 
