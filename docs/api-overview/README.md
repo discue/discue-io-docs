@@ -5,7 +5,7 @@ Our API let's you interact with your queues, listeners, and messages. This page 
 The API is exposed as an HTTP/1 and HTTP/2 service over TLS. All endpoints live under the URL `https://api.discue.io`.
 
 ## Organizations
-Organizations group a set of resources and access to these resources. You can create multiple organizations for different departments, users groups, or, i.e., stages. 
+Organizations group a set of resources and access to these resources. You can create multiple organizations for different departments, users groups, or, e.g., stages. 
 
 Each organization's name must be unique and follow the [Reverse domain name](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) notation.
 
