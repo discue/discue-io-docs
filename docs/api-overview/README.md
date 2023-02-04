@@ -29,7 +29,7 @@ Objects group other data types logically. Objects need to define at least one pr
 - `props` **A map** defining each property of the target object and allowed values. 
 
 #### Optional directives
-- `required` **true**, if this object needs to be set. If it is missing, the validation will fail. 
+- `required` **true**, if this object needs to be set. If set to `true` and its value is null or undefined, the validation will fail. 
   - default: **true**.
 - `strict` **true**, if additional undeclared properties should cause the validation to fail. 
   - default: **true**.
@@ -68,7 +68,7 @@ Objects group other data types logically. Objects need to define at least one pr
 - `items` Defines the type of the `elements` of the target array.
 
 #### Optional directives
-- `required` **true**, if this array needs to be set. If it is missing, the validation will fail. 
+- `required` **true**, if this array needs to be set. If set to `true` and its value is null or undefined, the validation will fail. 
   - default: **true**.
 
 <CodeGroup>
@@ -109,7 +109,7 @@ Objects group other data types logically. Objects need to define at least one pr
   - default: **null**.
 - `max` **Maximum** amoun of characters. 
   - default: **null**.
-- `required` **true**, if this string needs to be set. If it is missing, the validation will fail. 
+- `required` **true**, if this string needs to be set. If set to `true` and its value is null or undefined, the validation will fail. 
   - default: **true**.
 
 <CodeGroup>
@@ -145,7 +145,7 @@ Objects group other data types logically. Objects need to define at least one pr
   - default: **null**.
 - `max` **Maximum** allowed value of the number. 
   - default: **null**.
-- `required` **true**, if this number needs to be set. If it is missing, the validation will fail. 
+- `required` **true**, if this number needs to be set. If set to `true` and its value is null or undefined, the validation will fail. 
   - default: **true**.
 
 Per queue exactly one schema can be defined. 
