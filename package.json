@@ -22,7 +22,7 @@
     "firebase-tools": "^11.24.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.21",
     "pascal-case": "^3.1.2",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
