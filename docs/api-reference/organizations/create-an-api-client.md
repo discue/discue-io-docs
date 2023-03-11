@@ -41,13 +41,8 @@ See also: [Authentication](/getting-started/#prerequisites).
 
 ```shell
 curl -X POST http://api.discue.io/v1/api_clients \
-  -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
-  -H 'X-API-KEY: API_KEY' \
-  -d '{
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}' 
+  -H 'X-API-KEY: API_KEY'
 ```
 
 </CodeGroupItem>
@@ -55,19 +50,13 @@ curl -X POST http://api.discue.io/v1/api_clients \
 <CodeGroupItem title="javascript">
 
 ```javascript
-const body = {
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}
-
 const headers = {
-  'Content-Type':'application/json',
   'Accept':'application/json',
   'X-API-KEY':'API_KEY'
 }
 
 const response = await fetch('http://api.discue.io/v1/api_clients', {
-  method: 'POST',  body,  headers
+  method: 'POST',  headers
 })
 
 const body = await response.json()
@@ -80,7 +69,6 @@ const body = await response.json()
 ```python
 import requests
 headers = {
-  'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-API-KEY': 'API_KEY'
 }
@@ -103,7 +91,6 @@ import (
 func main() {
 
   headers := map[string][]string{
-      "Content-Type": []string{"application/json"},
       "Accept": []string{"application/json"},
       "X-API-KEY": []string{"API_KEY"},
   }
@@ -121,22 +108,10 @@ func main() {
 
 </CodeGroup>
 
-## Body
-
-```json
-{
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}
-```
-
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
-|body|body|[ApiClient](#schemaapiclient)| ❌ |none|
-|» name|body|string| ❌ |none|
-|» id|body|[ResourceId](#resourceid)| ❌ |none|
 
 ## Responses 
 

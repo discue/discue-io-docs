@@ -8,21 +8,27 @@ language_tabs:
 toc_footers: []
 includes: []
 api:
-  method: put
-  path: /api_clients/{api_client_id}
-  name: Update an api client
+  method: get
+  path: /queues/{queue_id}/schemas/{schema_id}
+  name: Get a schema by id
 
 ---
 
-# Update an api client
+# Get a schema by id
 
 <p class="text-lg">
-<span class="font-medium">PUT</span> /api_clients/{api_client_id}
+<span class="font-medium">GET</span> /queues/{queue_id}/schemas/{schema_id}
 </p>
 
-**Update an api client**. 
+**Returns** a queue schema by id. Requires a valid `queue_id` and `schema_id` as path parameters.
+If no queue or schema with the given ids can be found, the endpoint returns status `404`.
 
-<Badge type="get" text="Info" vertical="middle"/> In this context an api client and an organization can be used synonymously.
+A valid `queue_id` is one that was returned by the 
+[queue creation endpoint](/api-reference/queues/create-a-queue.html). The `schema_id` is computed
+during the creation of a queue, **if** an additional schema object was set.
+
+The result may be inconistent as in not update-to-date as results may be cached
+for a short period of time.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 
@@ -37,14 +43,9 @@ See also: [Authentication](/getting-started/#prerequisites).
 <CodeGroup><CodeGroupItem title="shell">
 
 ```shell
-curl -X PUT http://api.discue.io/v1/api_clients/{api_client_id} \
-  -H 'Content-Type: application/json' \
+curl -X GET http://api.discue.io/v1/queues/{queue_id}/schemas/{schema_id} \
   -H 'Accept: application/json' \
-  -H 'X-API-KEY: API_KEY' \
-  -d '{
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}' 
+  -H 'X-API-KEY: API_KEY'
 ```
 
 </CodeGroupItem>
@@ -52,19 +53,13 @@ curl -X PUT http://api.discue.io/v1/api_clients/{api_client_id} \
 <CodeGroupItem title="javascript">
 
 ```javascript
-const body = {
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}
-
 const headers = {
-  'Content-Type':'application/json',
   'Accept':'application/json',
   'X-API-KEY':'API_KEY'
 }
 
-const response = await fetch('http://api.discue.io/v1/api_clients/{api_client_id}', {
-  method: 'PUT',  body,  headers
+const response = await fetch('http://api.discue.io/v1/queues/{queue_id}/schemas/{schema_id}', {
+  method: 'GET',  headers
 })
 
 const body = await response.json()
@@ -77,12 +72,11 @@ const body = await response.json()
 ```python
 import requests
 headers = {
-  'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-API-KEY': 'API_KEY'
 }
 
-r = requests.put('http://api.discue.io/v1/api_clients/{api_client_id}', headers = headers)
+r = requests.get('http://api.discue.io/v1/queues/{queue_id}/schemas/{schema_id}', headers = headers)
 ```
 
 </CodeGroupItem>
@@ -100,13 +94,12 @@ import (
 func main() {
 
   headers := map[string][]string{
-      "Content-Type": []string{"application/json"},
       "Accept": []string{"application/json"},
       "X-API-KEY": []string{"API_KEY"},
   }
 
   data := bytes.NewBuffer([]byte{jsonReq})
-  req, err := http.NewRequest("PUT", "http://api.discue.io/v1/api_clients/{api_client_id}", data)
+  req, err := http.NewRequest("GET", "http://api.discue.io/v1/queues/{queue_id}/schemas/{schema_id}", data)
   req.Header = headers
 
   client := &http.Client{}
@@ -118,23 +111,12 @@ func main() {
 
 </CodeGroup>
 
-## Body
-
-```json
-{
-  "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-  "name": "example.com/dev"
-}
-```
-
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|api_client_id|path|string(uuid)|✔|none|
+|queue_id|path|string(uuid)|✔|Id of the target queue|
+|schema_id|path|string(sha256)|✔|Id of the target schema|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
-|body|body|[ApiClientRef](#schemaapiclientref)| ❌ |none|
-|» name|body|string| ❌ |none|
-|» id|body|[ResourceId](#resourceid)| ❌ |none|
 
 ## Responses 
 
@@ -143,13 +125,25 @@ func main() {
 
 ```json
 {
-  "api_client": {
-    "id": "5bc2be68-7498-4853-aa64-4be0ca62934e",
-    "name": "example.com/dev"
+  "schema": {
+    "person": {
+      "type": "object",
+      "props": {
+        "firstName": {
+          "type": "string"
+        },
+        "secondName": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "number"
+        }
+      }
+    }
   },
   "_links": {
     "self": {
-      "href": "https://api.discue.io/api_clients/5bc2be68-7498-4853-aa64-4be0ca62934e"
+      "href": "https://api.discue.io/queues/180994c-b6b2-4d0e-b7ad-414716e83386/schema/0644659fb47b466886dda496cb7fbc76skemfndj12m3"
     }
   }
 }
@@ -307,7 +301,7 @@ func main() {
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[CreateApiClientResponse](#createapiclientresponse)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Ok|[GetSchemaResponse](#getschemaresponse)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|Inline|
 |401|[Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1)|Unauthorized|Inline|
 |402|[Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2)|Payment Required|Inline|
