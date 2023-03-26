@@ -130,7 +130,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|api_client_id|path|string(uuid)|✔|none|
+|api_client_id|path|[ResourceId](#schemaresourceid)|✔|none|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[ApiClientRef](#schemaapiclientref)| ❌ |none|
 |» name|body|string| ❌ |none|

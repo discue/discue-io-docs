@@ -144,7 +144,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|queue_id|path|string(uuid)|✔|Id of the target queue|
+|queue_id|path|[ResourceId](#schemaresourceid)|✔|Id of the target queue|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[CreateListenerRequest](#schemacreatelistenerrequest)|✔|none|
 |» name|body|string|✔|none|

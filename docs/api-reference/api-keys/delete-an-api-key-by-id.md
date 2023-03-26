@@ -117,7 +117,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|api_key_id|path|string(uuid)|✔|Id of the api key|
+|api_key_id|path|[ResourceId](#schemaresourceid)|✔|Id of the api key|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 

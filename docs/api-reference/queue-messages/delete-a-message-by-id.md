@@ -115,8 +115,8 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|queue_id|path|string(uuid)|✔|Id of the target queue|
-|message_id|path|string(uuid)|✔|Id of the target message|
+|queue_id|path|[ResourceId](#schemaresourceid)|✔|Id of the target queue|
+|message_id|path|[ResourceId](#schemaresourceid)|✔|Id of the target message|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 

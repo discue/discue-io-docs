@@ -22,6 +22,30 @@ api:
 
 **Creates** a new API key and returns the actual key. 
 
+An API Key may have various scopes attached to it. If no scopes get passed
+a default set of scopes will be assigned. **Please note**: By default the
+scopes are very permissive to support a wide range of use cases. 
+
+As an example, a restrictive scope might look like this:
+```json
+  scopes: [{
+    resource: 'listeners',
+    access: 'write',
+    targets: [
+      'MbCS6UB_m7NdvyDOE8stT',
+      'YKOuoR5IIUUWxZeZLKf2O'
+    ]
+  }, {
+    resource: 'queues',
+    access: 'write',
+    targets: '*'
+  }, {
+    resource: 'messages',
+    access: 'read',
+    targets: '*'
+  }]
+```
+
 <Badge type="warning" text="Note" vertical="middle"/> For security reasons, the 
 API key will only be returned once after its creation.
 
@@ -39,8 +63,36 @@ See also: [Authentication](/getting-started/#prerequisites).
 
 ```shell
 curl -X POST http://api.discue.io/v1/api_keys \
+  -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
-  -H 'X-API-KEY: API_KEY'
+  -H 'X-API-KEY: API_KEY' \
+  -d '{
+  "name": "string",
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
+}' 
 ```
 
 </CodeGroupItem>
@@ -48,13 +100,42 @@ curl -X POST http://api.discue.io/v1/api_keys \
 <CodeGroupItem title="javascript">
 
 ```javascript
+const body = {
+  "name": "string",
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
+}
+
 const headers = {
+  'Content-Type':'application/json',
   'Accept':'application/json',
   'X-API-KEY':'API_KEY'
 }
 
 const response = await fetch('http://api.discue.io/v1/api_keys', {
-  method: 'POST',  headers
+  method: 'POST',  body,  headers
 })
 
 const body = await response.json()
@@ -67,6 +148,7 @@ const body = await response.json()
 ```python
 import requests
 headers = {
+  'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-API-KEY': 'API_KEY'
 }
@@ -89,6 +171,7 @@ import (
 func main() {
 
   headers := map[string][]string{
+      "Content-Type": []string{"application/json"},
       "Accept": []string{"application/json"},
       "X-API-KEY": []string{"API_KEY"},
   }
@@ -106,10 +189,70 @@ func main() {
 
 </CodeGroup>
 
+## Body
+
+```json
+{
+  "name": "string",
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
+}
+```
+
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
+|body|body|[PostApiKeyRequest](#schemapostapikeyrequest)| ❌ |none|
+|» name|body|[ResourceName](#resourcename)| ❌ |none|
+|» status|body|string| ❌ |none|
+|» scopes|body|[ApiKeyScope](#apikeyscope)| ❌ |none|
+|»» resource|body|string| ❌ |none|
+|»» access|body|string| ❌ |none|
+|»» targets|body|any| ❌ |none|
+|»»» *anonymous*|body|[ResourceId](#resourceid)| ❌ |none|
+|»»» *anonymous*|body|string| ❌ |none|
+
+## Enumerated Values
+
+|Parameter|Value|
+|---|---|
+|» status|disabled|
+|» status|enabled|
+|»» resource|api_clients|
+|»» resource|api_keys|
+|»» resource|events|
+|»» resource|queues|
+|»» resource|listeners|
+|»» resource|messages|
+|»» resource|schemas|
+|»» resource|stats|
+|»» resource|subscriptions|
+|»» access|read|
+|»» access|write|
+|»»» *anonymous*|*|
 
 ## Responses 
 

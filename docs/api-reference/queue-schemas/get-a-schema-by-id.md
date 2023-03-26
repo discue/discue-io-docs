@@ -23,6 +23,10 @@ api:
 **Returns** a queue schema by id. Requires a valid `queue_id` and `schema_id` as path parameters.
 If no queue or schema with the given ids can be found, the endpoint returns status `404`.
 
+Currently there is no way to `create`, `update`, or `delete` schemas, because a schema
+has to be assigned to a queue. You can use the `update` endpoint of the queue in question,
+to update, or remove its schema. 
+
 A valid `queue_id` is one that was returned by the 
 [queue creation endpoint](/api-reference/queues/create-a-queue.html). The `schema_id` is computed
 during the creation of a queue, **if** an additional schema object was set.
@@ -114,7 +118,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|queue_id|path|string(uuid)|✔|Id of the target queue|
+|queue_id|path|[ResourceId](#schemaresourceid)|✔|Id of the target queue|
 |schema_id|path|string(sha256)|✔|Id of the target schema|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 

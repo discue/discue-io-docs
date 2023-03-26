@@ -23,13 +23,20 @@ api:
 **Updates** an api key by id. **Requires** the target 
 `api_key_id` as a path parameter.
 
+An API Key can be `disabled` by passing `status: disabled`. By passing `status: enabled`, 
+you can ``enable`` the key again. 
+
+Always pass the the whole array of `scopes` you want this key to have. At this moment there is no way
+to make incremental updates. Whenever the `scopes` array is passed to the endpoint, the previous `scopes`
+array will be overriden.
+
 A valid `api_key_id` is one that was returned by the 
 [api key creation endpoint](/api-reference/api-keys/create-an-api-key.html).
 If no api key can be found with the given `api_key_id`, the endpoint returns status `404`.
 
 Returns `404` if no api key was found with the given `api_key_id`.
 
-Only mutable properties like `name` can be updated.
+Only mutable properties like `name`, `status`, and `scopes` can be updated.
 
 ::: tip Authentication
 **The target organization for this request will be determined by the supplied access token.** 
@@ -50,7 +57,30 @@ curl -X PUT http://api.discue.io/v1/api_keys/{api_key_id} \
   -H 'X-API-KEY: API_KEY' \
   -d '{
   "name": "string",
-  "status": "disabled"
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
 }' 
 ```
 
@@ -61,7 +91,30 @@ curl -X PUT http://api.discue.io/v1/api_keys/{api_key_id} \
 ```javascript
 const body = {
   "name": "string",
-  "status": "disabled"
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
 }
 
 const headers = {
@@ -130,18 +183,47 @@ func main() {
 ```json
 {
   "name": "string",
-  "status": "disabled"
+  "status": "disabled",
+  "scopes": [
+    {
+      "resource": "queues",
+      "access": "write",
+      "targets": [
+        "*"
+      ]
+    },
+    {
+      "resource": "listeners",
+      "access": "write",
+      "targets": [
+        "_Tzrg1O3jk4_FZTAEThNq"
+      ]
+    },
+    {
+      "resource": "messages",
+      "access": "read",
+      "targets": [
+        "*"
+      ]
+    }
+  ]
 }
 ```
 
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|api_key_id|path|string(uuid)|✔|Id of the api key|
+|api_key_id|path|[ResourceId](#schemaresourceid)|✔|Id of the api key|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 |body|body|[UpdateApiKeyRequest](#schemaupdateapikeyrequest)| ❌ |none|
 |» name|body|[ResourceName](#resourcename)| ❌ |none|
 |» status|body|string| ❌ |none|
+|» scopes|body|[ApiKeyScope](#apikeyscope)| ❌ |none|
+|»» resource|body|string| ❌ |none|
+|»» access|body|string| ❌ |none|
+|»» targets|body|any| ❌ |none|
+|»»» *anonymous*|body|[ResourceId](#resourceid)| ❌ |none|
+|»»» *anonymous*|body|string| ❌ |none|
 
 ## Enumerated Values
 
@@ -149,6 +231,18 @@ func main() {
 |---|---|
 |» status|disabled|
 |» status|enabled|
+|»» resource|api_clients|
+|»» resource|api_keys|
+|»» resource|events|
+|»» resource|queues|
+|»» resource|listeners|
+|»» resource|messages|
+|»» resource|schemas|
+|»» resource|stats|
+|»» resource|subscriptions|
+|»» access|read|
+|»» access|write|
+|»»» *anonymous*|*|
 
 ## Responses 
 

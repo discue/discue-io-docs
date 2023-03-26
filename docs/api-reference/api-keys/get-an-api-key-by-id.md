@@ -117,7 +117,7 @@ func main() {
 ## Parameters 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|api_key_id|path|string(uuid)|✔|Id of the api key|
+|api_key_id|path|[ResourceId](#schemaresourceid)|✔|Id of the api key|
 |pretty|query|boolean| ❌ |Return the response pretty printed|
 
 ## Responses 
@@ -134,7 +134,16 @@ func main() {
     "updated_at": 1644616838173,
     "last_used_at": 1644616838173,
     "key": "ep1",
-    "status": "disabled"
+    "status": "disabled",
+    "scopes": [
+      {
+        "resource": "queues",
+        "access": "write",
+        "targets": [
+          "_A36cABAOqhBdNeZeXB0l"
+        ]
+      }
+    ]
   },
   "_links": {
     "self": {
