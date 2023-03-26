@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/discue/api-docs/compare/v0.6.0...v0.7.0) (2023-03-26)
+
+
+### Chores
+
+* **deps-dev:** bump @discue/ui-components from 0.29.2 to 0.30.0 ([391c279](https://github.com/discue/api-docs/commit/391c2793bc0ba7dc20a591cb78a2ec21e55cb5e3))
+* **deps-dev:** bump @vuepress/plugin-shiki ([572bc40](https://github.com/discue/api-docs/commit/572bc408285b13ac87636548400aae4a8e35c187))
+* **deps-dev:** bump firebase-tools from 11.21.0 to 11.22.0 ([5ef18aa](https://github.com/discue/api-docs/commit/5ef18aa0d4b84cb7dbf06a94a65a24a44da0b1b8))
+* **deps-dev:** bump firebase-tools from 11.22.0 to 11.23.1 ([2c5dbb5](https://github.com/discue/api-docs/commit/2c5dbb5b53f481c270396ba62b1cc652936246b2))
+* **deps-dev:** bump firebase-tools from 11.23.1 to 11.24.0 ([75d5302](https://github.com/discue/api-docs/commit/75d5302ac449133ba76f3117d8a8bdc2d0bf8f70))
+* **deps-dev:** bump firebase-tools from 11.24.0 to 11.24.1 ([c939748](https://github.com/discue/api-docs/commit/c9397489a324f7d3f86fcfeef239d38579357fa1))
+* **deps-dev:** bump markdown-it-anchor from 8.6.6 to 8.6.7 ([2f4778b](https://github.com/discue/api-docs/commit/2f4778baddc9a4fef3c14b7fffb111ddeb1fcb63))
+* **deps-dev:** bump nodemon from 2.0.20 to 2.0.21 ([6647a86](https://github.com/discue/api-docs/commit/6647a86252eb614b498cfe859e5b6c0f7e7970f3))
+* **deps-dev:** bump tailwindcss from 3.2.4 to 3.2.7 ([0a5a065](https://github.com/discue/api-docs/commit/0a5a065b3ccabc8962403e922ae34f3a6800e795))
+* **deps-dev:** bump vuepress from 2.0.0-beta.60 to 2.0.0-beta.61 ([eaabb8c](https://github.com/discue/api-docs/commit/eaabb8cf7f5e60ec3e4489f1c4d6bdf7212033f3))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([044bd01](https://github.com/discue/api-docs/commit/044bd0111633bbbf2e4a578ca3f7f634a2b123f6))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([fde7e92](https://github.com/discue/api-docs/commit/fde7e92949d82e3b82c63199d5df914717923ead))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([d64afd1](https://github.com/discue/api-docs/commit/d64afd1939395d333ea02bfdf967d78a03cb3564))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([4adb77e](https://github.com/discue/api-docs/commit/4adb77eece41aaac91d5a781b7d2c72b4b482c43))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([7d22ff6](https://github.com/discue/api-docs/commit/7d22ff6aa374de23376b80950658cdc201c63eaa))
+* **deps-dev:** bump vuepress-plugin-sitemap2 ([edf9800](https://github.com/discue/api-docs/commit/edf98000c8788d5b38fabd7cc3625bf3451e60c0))
+* **deps:** add missing dependencies ([37b4547](https://github.com/discue/api-docs/commit/37b454766734e8474ba312a784baf4534eff54f3))
+* **docs:** update api documentation ([50d7e1a](https://github.com/discue/api-docs/commit/50d7e1ab9461314b814e4556431bfe2580d8f424))
+
 ## [0.6.0](https://github.com/discue/api-docs/compare/v0.5.0...v0.6.0) (2023-01-30)
 
 
