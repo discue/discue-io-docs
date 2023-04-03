@@ -30,6 +30,9 @@ Always pass the the whole array of `scopes` you want this key to have. At this m
 to make incremental updates. Whenever the `scopes` array is passed to the endpoint, the previous `scopes`
 array will be overriden.
 
+Protected scopes like `api_clients`, `api_keys` and `subscriptions` cannot be set via 
+API.
+
 A valid `api_key_id` is one that was returned by the 
 [api key creation endpoint](/api-reference/api-keys/create-an-api-key.html).
 If no api key can be found with the given `api_key_id`, the endpoint returns status `404`.

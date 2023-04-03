@@ -46,6 +46,9 @@ As an example, a restrictive scope might look like this:
   }]
 ```
 
+Protected scopes like `api_clients`, `api_keys` and `subscriptions` cannot be set via 
+API.
+
 <Badge type="warning" text="Note" vertical="middle"/> For security reasons, the 
 API key will only be returned once after its creation.
 
