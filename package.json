@@ -21,7 +21,7 @@
     "@vuepress/plugin-shiki": "2.0.0-beta.61",
     "@vuepress/plugin-prismjs": "2.0.0-beta.61",
     "@vuepress/theme-default": "2.0.0-beta.61",
-    "firebase-tools": "^11.30.0",
+    "firebase-tools": "^12.0.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "nodemon": "^2.0.22",
