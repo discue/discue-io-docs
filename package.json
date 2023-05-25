@@ -18,10 +18,10 @@
   "license": "MIT",
   "devDependencies": {
     "@discue/ui-components": "^0.38.2",
-    "@vuepress/plugin-shiki": "2.0.0-beta.61",
-    "@vuepress/plugin-prismjs": "2.0.0-beta.61",
-    "@vuepress/theme-default": "2.0.0-beta.61",
-    "firebase-tools": "^11.30.0",
+    "@vuepress/plugin-prismjs": "2.0.0-beta.62",
+    "@vuepress/plugin-shiki": "2.0.0-beta.62",
+    "@vuepress/theme-default": "2.0.0-beta.62",
+    "firebase-tools": "^12.2.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "nodemon": "^2.0.22",
@@ -32,8 +32,8 @@
     "snake-case": "^3.0.4",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.2",
-    "vuepress": "2.0.0-beta.61",
-    "vuepress-plugin-sitemap2": "^2.0.0-beta.208",
-    "yaml": "^2.2.2"
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.215",
+    "yaml": "^2.3.0"
   }
 }
