@@ -1,3 +1,5 @@
 <template>
-    <Footer />
+    <ClientOnly>
+        <Footer />
+    </ClientOnly>
 </template>
