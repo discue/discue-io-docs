@@ -19,7 +19,7 @@
   "devDependencies": {
     "@discue/ui-components": "^0.38.2",
     "@vuepress/plugin-prismjs": "2.0.0-beta.63",
-    "@vuepress/plugin-shiki": "2.0.0-beta.63",
+    "@vuepress/plugin-shiki": "2.0.0-beta.66",
     "@vuepress/theme-default": "2.0.0-beta.63",
     "firebase-tools": "^12.4.0",
     "markdown-it-anchor": "^8.6.7",
