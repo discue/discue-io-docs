@@ -30,6 +30,6 @@ jobs:
     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
         repoToken: '${{ secrets.GITHUB_TOKEN }}'
-        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DISCUE_IO_DOCS_ECD49 }}'
+        firebaseServiceAccount: '${{ secrets.DEPLOY_GCP_SERVICE_ACCOUNT_JSON }}'
         projectId: discue-io-docs-ecd49
         channelId: live
