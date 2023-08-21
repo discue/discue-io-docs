@@ -18,6 +18,11 @@ jobs:
       with:
         node-version: lts/*
 
+    - name: Authenticate with Google Cloud
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.DEPLOY_GCP_SERVICE_ACCOUNT_JSON }}'
+
     - name: Install dependencies
       run: npm ci
 
@@ -27,9 +32,5 @@ jobs:
     - name: Add version file
       run: npm pkg get --json version name > docs/.vuepress/dist/_version.json
 
-    - uses: FirebaseExtended/action-hosting-deploy@v0
-      with:
-        repoToken: '${{ secrets.GITHUB_TOKEN }}'
-        firebaseServiceAccount: '${{ secrets.DEPLOY_GCP_SERVICE_ACCOUNT_JSON }}'
-        projectId: discue-io-docs-ecd49
-        channelId: live
+    - name: Deploy
+      run: npx firebase deploy --only hosting
