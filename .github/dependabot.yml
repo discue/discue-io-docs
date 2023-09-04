@@ -7,6 +7,10 @@ updates:
     schedule:
       interval: weekly
     versioning-strategy: increase
+    groups:
+      vuepress:
+        patterns:
+          - "vuepress*" 
 
   - package-ecosystem: github-actions
     assignees:
