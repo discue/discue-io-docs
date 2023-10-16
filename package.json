@@ -34,6 +34,6 @@
     "tailwindcss": "^3.3.3",
     "vuepress": "2.0.0-beta.67",
     "vuepress-plugin-sitemap2": "^2.0.0-beta.237",
-    "yaml": "^2.3.2"
+    "yaml": "^2.3.3"
   }
 }
