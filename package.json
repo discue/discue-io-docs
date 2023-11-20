@@ -20,7 +20,7 @@
     "@discue/ui-components": "^0.42.0",
     "@vuepress/plugin-prismjs": "2.0.0-rc.0",
     "@vuepress/plugin-shiki": "2.0.0-rc.0",
-    "@vuepress/theme-default": "2.0.0-beta.67",
+    "@vuepress/theme-default": "2.0.0-rc.0",
     "firebase-tools": "^12.9.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
