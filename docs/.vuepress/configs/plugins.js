@@ -1,6 +1,6 @@
 import prismPlugin from '@vuepress/plugin-prismjs'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2'
+import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 
 export default [
     prismPlugin(false),
