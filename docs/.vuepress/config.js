@@ -1,3 +1,4 @@
+import { viteBundler } from '@vuepress/bundler-vite'
 import extendsMarkdown from './configs/extends-markdown'
 import head from './configs/head'
 import markdown from './configs/markdown'
@@ -7,6 +8,7 @@ import sidebar from './configs/sidebar'
 import defaultTheme from './theme'
 
 export default {
+    bundler: viteBundler(),
     lang: 'en-US',
     title: 'discue',
     description: 'Developer documentation for the secure and reliable messaging and queueing service.',

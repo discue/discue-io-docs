@@ -18,9 +18,11 @@
   "license": "MIT",
   "devDependencies": {
     "@discue/ui-components": "^0.42.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.8",
     "@vuepress/plugin-prismjs": "2.0.0-rc.15",
     "@vuepress/plugin-shiki": "2.0.0-rc.17",
     "@vuepress/theme-default": "2.0.0-rc.17",
+    "autoprefixer": "^10.4.17",
     "firebase-tools": "^13.3.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
