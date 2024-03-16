@@ -5,16 +5,17 @@ updates:
       - stfsy
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     versioning-strategy: increase
     groups:
       vuepress:
         patterns:
-          - "vuepress*" 
+          - "vuepress*"
+          - "@vuepress*"
 
   - package-ecosystem: github-actions
     assignees:
       - stfsy
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
