@@ -21,7 +21,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.8",
     "@vuepress/plugin-shiki": "2.0.0-rc.18",
     "@vuepress/theme-default": "2.0.0-rc.20",
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "firebase-tools": "^13.5.1",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
