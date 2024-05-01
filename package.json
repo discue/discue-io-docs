@@ -19,8 +19,8 @@
   "devDependencies": {
     "@discue/ui-components": "^0.42.0",
     "@vuepress/bundler-vite": "2.0.0-rc.9",
-    "@vuepress/plugin-shiki": "2.0.0-rc.21",
-    "@vuepress/theme-default": "2.0.0-rc.21",
+    "@vuepress/plugin-shiki": "2.0.0-rc.25",
+    "@vuepress/theme-default": "2.0.0-rc.26",
     "autoprefixer": "^10.4.19",
     "firebase-tools": "^13.5.1",
     "markdown-it-anchor": "^8.6.7",
