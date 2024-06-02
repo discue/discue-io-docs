@@ -1,15 +1,13 @@
 import { defaultTheme } from '@vuepress/theme-default';
-import { path } from '@vuepress/utils';
+import path from 'node:path';
 
 export default options => {
-
+    console.log('theme', JSON.stringify(defaultTheme(options), null, 2))
     return Object.assign({}, defaultTheme(options), {
         name: 'vuepress-theme-local',
         extends: defaultTheme(options),
         alias: {
-            '@theme/AutoLink.vue': path.resolve(__dirname, './components/AutoLinkWithHttpEndpointBadge.vue'),
-            '@theme/HomeFooter.vue': path.resolve(__dirname, './layouts/HomeFooter.vue'),
-            '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue')
+            '@theme/SidebarItem.vue': path.resolve(__dirname, './components/SidebarItem.vue')
         }
     })
 }

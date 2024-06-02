@@ -1,10 +1,12 @@
 @import './variables.scss';
 @import './back-to-top.scss';
 @import './badge.scss';
+@import './external-icon.scss';
 @import './doc-search.scss';
 @import './dropdown-arrow.scss';
 @import './footer.scss';
 @import './navbar.scss';
+@import './page-meta-nav.scss';
 @import './preview.scss';
 @import './sidebar.scss';
 @import './site-name.scss';
@@ -58,10 +60,6 @@ a.header-anchor {
         padding-top: 0 !important;
         padding-bottom: 1rem !important;
     }
-}
-
-.page-meta .meta-item {
-    margin-top: 0 !important
 }
 
 @media screen and (max-width: 719px) {
