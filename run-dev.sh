@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exu
+
 export NODE_ENV=development
 
 # replace duplicate footer tag

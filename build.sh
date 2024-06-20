@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exu
+
 export NODE_ENV=production
 
 # replace duplicate footer tag
