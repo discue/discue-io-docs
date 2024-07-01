@@ -17,7 +17,7 @@
   "author": "Stefan Pfaffel",
   "license": "MIT",
   "devDependencies": {
-    "@discue/ui-components": "^0.43.0",
+    "@discue/ui-components": "^0.48.0",
     "@vuepress/bundler-vite": "^2.0.0-rc.7",
     "@vuepress/markdown": "2.0.0-rc.12",
     "@vuepress/plugin-shiki": "2.0.0-rc.33",
