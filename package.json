@@ -27,7 +27,7 @@
     "markdown-it-attrs": "^4.1.6",
     "nodemon": "^3.1.4",
     "pascal-case": "^4.0.0",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.42",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "snake-case": "^4.0.0",
