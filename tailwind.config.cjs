@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     "./docs/**/*.{vue,js,ts,jsx,tsx,scss,md}",
     "./docs/.vuepress/theme/components/*.{vue,js,ts,jsx,tsx,scss,md}",
