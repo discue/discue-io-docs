@@ -42,7 +42,7 @@
 
 .vp-navbar-item>a:hover,
 .vp-navbar-item>a.route-link-active {
-    @apply border-b-4 border-gray-900 pb-2 -translate-y-0.5 !important;
+    @apply text-gray-900 dark:text-gray-400 border-b-4 border-gray-900 pb-2 -translate-y-0.5 !important;
 }
 
 html.dark {
