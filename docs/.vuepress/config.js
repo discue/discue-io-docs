@@ -1,13 +1,14 @@
-import { viteBundler } from '@vuepress/bundler-vite'
-import extendsMarkdown from './configs/extends-markdown'
-import head from './configs/head'
-import markdown from './configs/markdown'
-import navbar from './configs/navbar'
-import plugins from './configs/plugins'
-import sidebar from './configs/sidebar'
-import defaultTheme from './theme'
+import { viteBundler } from '@vuepress/bundler-vite';
+import { defineUserConfig } from '@vuepress/cli';
+import extendsMarkdown from './configs/extends-markdown';
+import head from './configs/head';
+import markdown from './configs/markdown';
+import navbar from './configs/navbar';
+import plugins from './configs/plugins';
+import sidebar from './configs/sidebar';
+import defaultTheme from './theme';
 
-export default {
+export default defineUserConfig({
     bundler: viteBundler(),
     lang: 'en-US',
     title: 'discue',
@@ -32,4 +33,4 @@ export default {
     extendsMarkdown,
     markdown,
     head,
-}
+})
