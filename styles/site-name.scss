@@ -1,24 +1,24 @@
-span.site-name:after {
+span.vp-site-name:after {
     content: '.io';
     @apply text-4xl text-gray-500 font-light !important;
 }
 
-span.site-name:before {
+span.vp-site-name:before {
     content: 'docs.';
     @apply text-4xl text-gray-500 font-light !important;
 }
 
 html.dark {
-    span.site-name {
+    span.vp-site-name {
         color: #adbac7 !important;
     }
 
-    span.site-name:before {
+    span.vp-site-name:before {
         color: #adbac7 !important;
     }
 }
 
-span.site-name {
+span.vp-site-name {
     @apply text-4xl text-gray-900 font-bold -top-1 !important;
     margin-left: 0.55rem !important;
 }
