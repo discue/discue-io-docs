@@ -69,6 +69,8 @@
     --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
     --content-width: 740px;
     --homepage-width: 960px;
+
+    --vp-c-accent: theme('colors.gray.900');
 }
 
 html.dark {
