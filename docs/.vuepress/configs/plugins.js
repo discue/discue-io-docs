@@ -1,9 +1,9 @@
-import prismPlugin from '@vuepress/plugin-prismjs'
+import { prismjsPlugin } from '@vuepress/plugin-prismjs'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 import { sitemapPlugin } from '@vuepress/plugin-sitemap'
 
 export default [
-    prismPlugin(false),
+    prismjsPlugin(false),
     sitemapPlugin({
         hostname: 'https://docs.discue.io',
         excludeUrls: [
