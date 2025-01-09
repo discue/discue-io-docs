@@ -71,6 +71,8 @@
     --homepage-width: 960px;
 
     --vp-c-accent: theme('colors.gray.900');
+    --vp-c-accent-bg: var(--c-brand);
+    --vp-c-border: var(--c-border);
 }
 
 html.dark {

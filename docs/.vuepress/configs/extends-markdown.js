@@ -1,4 +1,3 @@
-import anchorPlugin from 'markdown-it-anchor'
 import markdownItArrs from 'markdown-it-attrs'
 
 // eslint-disable-next-line no-control-regex
@@ -30,15 +29,5 @@ export default (md) => {
         allowedAttributes: ['id'],
         leftDelimiter: '[',
         rightDelimiter: ']',
-    })
-    md.use(anchorPlugin, {
-        level: [1, 2, 3, 4, 5, 6],
-        slugify,
-        permalink: anchorPlugin.permalink.ariaHidden({
-            class: 'header-anchor',
-            symbol: '#',
-            space: true,
-            placement: 'before',
-        }),
     })
 }

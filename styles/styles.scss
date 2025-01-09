@@ -5,7 +5,6 @@
 @import './doc-search.scss';
 @import './dropdown-arrow.scss';
 @import './footer.scss';
-@import './header-anchor.scss';
 @import './navbar.scss';
 @import './page-meta-nav.scss';
 @import './preview.scss';
@@ -29,7 +28,7 @@ h2 {
     @apply text-xl font-bold !important;
 }
 
-img.logo {
+img.vp-site-logo {
     margin-right: 0 !important;
     width: 1.8rem;
     margin-top: -0.6rem;
@@ -44,7 +43,7 @@ img.logo {
     @apply text-5xl text-gray-500 font-light !important;
 }
 
-a.header-anchor {
+a.header-anchor::before {
     color: #AFE81A;
 }
 
