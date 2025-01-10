@@ -47,10 +47,14 @@ a.header-anchor::before {
     color: #AFE81A;
 }
 
-.action-button {
-    @apply rounded-lg font-bold text-xl !important;
+html .vp-hero-action-button {
+    @apply rounded-lg font-bold text-xl;
+    @apply hover:shadow-md transform transition-transform hover:-translate-y-1
 }
 
+html .vp-hero-action-button:not(.primary):hover {
+    color: var(--vp-c-accent);
+}
 
 .page-nav {
     @apply border-none !important;
