@@ -74,6 +74,9 @@
     --vp-c-accent-hover: var(--c-brand);
     --vp-c-accent-bg: var(--c-brand);
     --vp-c-border: var(--c-border);
+
+    --copy-code-c-text: theme('colors.gray.400');
+    --code-c-text: theme('colors.gray.400')
 }
 
 html.dark {
