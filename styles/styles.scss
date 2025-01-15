@@ -20,6 +20,11 @@ h2 {
     @apply mb-4 !important;
 }
 
+html aside.vp-sidebar {
+    /* to ensure the footer cannot overlap the sidebar */
+    z-index: 20;
+}
+
 .sidebar-items>li>.sidebar-item-children>li>a.router-link-active.router-link-exact-active.sidebar-item {
     @apply text-lg;
 }
