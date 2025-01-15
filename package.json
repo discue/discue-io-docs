@@ -18,9 +18,9 @@
   "license": "MIT",
   "devDependencies": {
     "@discue/ui-components": "^0.49.0",
+    "@discue/vuepress-plugin-outline": "^0.5.0",
     "@vuepress/bundler-vite": "^2.0.0-rc.19",
     "@vuepress/markdown": "2.0.0-rc.19",
-    "@vuepress/plugin-active-header-links": "^2.0.0-rc.69",
     "@vuepress/plugin-shiki": "2.0.0-rc.68",
     "@vuepress/theme-default": "2.0.0-rc.68",
     "autoprefixer": "^10.4.18",
