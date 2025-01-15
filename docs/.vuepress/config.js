@@ -1,5 +1,6 @@
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from '@vuepress/cli';
+import { getDirname, path } from '@vuepress/utils';
 import extendsMarkdown from './configs/extends-markdown';
 import head from './configs/head';
 import markdown from './configs/markdown';
@@ -7,6 +8,8 @@ import navbar from './configs/navbar';
 import plugins from './configs/plugins';
 import sidebar from './configs/sidebar';
 import defaultTheme from './theme';
+
+const __dirname = import.meta.dirname || getDirname(import.meta.url)
 
 export default defineUserConfig({
     bundler: viteBundler(),
@@ -33,6 +36,9 @@ export default defineUserConfig({
             },
         },
     ),
+    alias: {
+        '@theme/VPAutoLink.vue': path.resolve(__dirname, './theme/components/VPAutoLink.vue')
+    },
     plugins,
     extendsMarkdown,
     markdown,

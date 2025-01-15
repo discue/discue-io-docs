@@ -1,25 +1,55 @@
-span.badge {
-    @apply font-bold;
+.auto-link.active {
+    span.vp-badge {
+        @apply font-bold;
 
-    &.get {
-        @apply bg-green-500;
+        &.get {
+            @apply bg-green-200 align-baseline !important;
+        }
+
+        &.put {
+            @apply bg-sky-300 align-baseline !important;
+        }
+
+        &.patch {
+            @apply bg-yellow-300 align-baseline !important;
+        }
+
+        &.post {
+            @apply bg-orange-300 align-baseline !important;
+        }
+
+        &.delete {
+            @apply bg-red-400 align-baseline !important;
+        }
     }
+}
 
-    &.put {
-        @apply bg-blue-500;
-    }
+.auto-link:not(.active) {
+    span.vp-badge {
+        &.get {
+            @apply bg-white border-2 border-solid border-green-200 align-baseline !important;
+        }
 
-    &.post {
-        @apply bg-orange-400;
-    }
+        &.put {
+            @apply bg-white border-2 border-solid border-sky-300 align-baseline !important;
+        }
 
-    &.delete {
-        @apply bg-red-500;
+        &.patch {
+            @apply bg-white border-2 border-solid border-yellow-300 align-baseline !important;
+        }
+
+        &.post {
+            @apply bg-white border-2 border-solid border-orange-300 align-baseline !important;
+        }
+
+        &.delete {
+            @apply bg-white border-2 border-solid border-red-400 align-baseline !important;
+        }
     }
 }
 
 sidebar-item {
-    .badge {
+    .vp-badge {
         @apply mr-1
     }
 }
