@@ -28,7 +28,7 @@ export default defineUserConfig({
             docsBranch: 'main',
             repo: 'discue/api-docs',
             repoLabel: 'GitHub',
-            sidebarDepth: 4,
+            sidebarDepth: 1,
             navbar,
             sidebar,
             themePlugins: {
