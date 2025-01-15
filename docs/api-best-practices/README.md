@@ -1,6 +1,3 @@
----
-title: API Best Practices
----
 # API Best Practices
 
 Our API let's you interact with your queues, listeners, and messages. This page will give you an overview of our API while [API Reference](api-reference/) will give you a detailed impression of the available endpoints and schemas.
