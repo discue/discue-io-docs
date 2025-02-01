@@ -24,7 +24,7 @@
     "@vuepress/plugin-shiki": "2.0.0-rc.68",
     "@vuepress/theme-default": "2.0.0-rc.70",
     "autoprefixer": "^10.4.18",
-    "firebase-tools": "^13.29.1",
+    "firebase-tools": "^13.29.3",
     "markdown-it-attrs": "^4.3.1",
     "nodemon": "^3.1.9",
     "pascal-case": "^4.0.0",
